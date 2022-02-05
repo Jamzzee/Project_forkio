@@ -39,9 +39,6 @@ path.setEnv()
 
 /***** FUNCTIONS ****/
 
-// const buildFonts = () => 
-// 	gulp.src('./src/fonts/*')
-// 		.pipe(gulp.dest('./dist/fonts'))
 
 const buildScss = () =>
 	gulp
