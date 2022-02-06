@@ -63,6 +63,7 @@ a {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 header {
   background-attachment: fixed;
 }
@@ -89,4 +90,32 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+=======
+.header {
+  background-image: url("../../../dist/images/header-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero__menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 110px;
+}
+.hero__menu-list {
+  display: flex;
+}
+.hero__menu-item {
+  padding-right: 48px;
+}
+.hero__menu-link {
+  color: white;
+}
+.hero__menu-buy-link {
+  color: white;
+  display: inline-block;
+  margin-left: 20px;
+>>>>>>> 5d337cf6f1665a9486608c9606258b7520ae5036
 }

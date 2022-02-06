@@ -52,6 +52,7 @@ const buildScss = () =>
 		compatibility: 'ie8'
 	})))
 	.pipe(rename("style.min.css"))
+	
 	.pipe(gulp.dest(path.dist.css))
 	.pipe(browserSync.stream())
 
