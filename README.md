@@ -5,7 +5,7 @@
 Решили делать весь проект вместе.
 Media reqierements for 320px, 768px, 1200px.
 
-Media for 320px
+Media for 320px 
 @media (min-width="320px") and (max-width="480px") {
 
 }
