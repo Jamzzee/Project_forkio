@@ -1,9 +1,101 @@
-header {
+.header {
 	background-image: url("../../../dist/images/header-background.png");
-	// background-size: cover;
-	// background-position: center;
-	background-attachment: fixed;
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center;
+
+	
 }
+
+.hero__top{
+
+
+
+
+
+
+}
+
+.hero__menu{
+	@include flex(flex-end);
+	margin-right: 110px;
+
+	&-list{
+		display: flex;
+
+
+		
+	}
+
+	&-item{
+		
+		padding-right:48px;
+	}
+
+	&-link{
+		color: white;
+	}
+
+	&-buy-link{
+		color: white;
+		display:inline-block;
+		margin-left: 20px;
+
+	}
+
+}
+
+
+// .hero__logo {
+	
+// 	@include flex(flex-start);
+
+// }
+
+// .hero{
+// 	@include flex();
+
+
+// 	&__menu{
+
+// 		// @include flex();
+// 		// flex-direction: row;
+// 		// justify-content: center;
+	
+// 		&-item{}
+	
+	
+	
+	
+// 		&-list{
+
+// 			display: flex;
+// 			flex-direction: row;
+
+			
+
+// 			// @include flex(center);
+// 			// padding-right: 48px;
+			
+			
+// 		}
+	
+// 		&-link{
+	
+// 		}
+	
+// 		&-buy{
+// 			// @include flex(flex-end);
+// 			// &-link{
+// 			// 	@include flex(flex-end);
+// 			// }
+// 		}
+// 	}
+
+// }
+
+
+
 
 // @media((min-width: 320px) and (max-width:480px)) {}
 

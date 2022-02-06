@@ -63,7 +63,30 @@ a {
   box-sizing: border-box;
 }
 
-header {
+.header {
   background-image: url("../../../dist/images/header-background.png");
-  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero__menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 110px;
+}
+.hero__menu-list {
+  display: flex;
+}
+.hero__menu-item {
+  padding-right: 48px;
+}
+.hero__menu-link {
+  color: white;
+}
+.hero__menu-buy-link {
+  color: white;
+  display: inline-block;
+  margin-left: 20px;
 }
