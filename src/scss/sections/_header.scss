@@ -1,8 +1,30 @@
 header {
-	background-image: url("../../../dist/images/header-background.png");
+	// background-image: url("../../../dist/images/header-background.png");
 	// background-size: cover;
 	// background-position: center;
 	background-attachment: fixed;
+}
+
+.hero__top {
+	@include flex(space-between);
+	width: 100%;
+}
+
+.hero__menu {
+	margin-left: 320px;
+
+	&-list {
+		@include flex;
+		flex-direction: row;
+		justify-content: center;
+		// margin-left: 320px;
+
+	}
+}
+
+.hero__menu-buy {
+	@include flex;
+	// justify-content: flex-end;
 }
 
 // @media((min-width: 320px) and (max-width:480px)) {}
