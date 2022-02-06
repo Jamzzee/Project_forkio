@@ -1,23 +1,12 @@
-
-.header{
-    background-image: url("../../../dist/images/back-header.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+header {
+	background-image: url("../../../dist/images/header-background.png");
+	// background-size: cover;
+	// background-position: center;
+	background-attachment: fixed;
 }
 
-@media((min-width: 320px) and (max-width:480px)){
+// @media((min-width: 320px) and (max-width:480px)) {}
 
+// @media((min-width: 481px) and (max-width:992px)) {}
 
-}
-
-@media((min-width: 481px) and (max-width:992px)){
-    
-
-}
-
-@media((min-width: 993px) and (max-width:1200px)){
-    
-
-
-}
+// @media((min-width: 993px) and (max-width:1200px)) {}
