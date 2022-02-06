@@ -10,6 +10,7 @@ import uglify from 'gulp-uglify'
 import cleanCSS from 'gulp-clean-css'
 import rename from 'gulp-rename'
 import gulpif from 'gulp-if'
+import minifyjs from 'gulp-js-minify'
 
 const sass = gulpSass(dartSass)
 browserSync.create()
@@ -59,6 +60,7 @@ const buildJs = () =>
 	gulp.src(path.src.js)
 	.pipe(concat('main.js'))
 	.pipe(gulpif(path.isProd, uglify()))
+	.pipe(minifyjs())
 	.pipe(rename("scripts.min.js"))
 	.pipe(gulp.dest(path.dist.js))
 	.pipe(browserSync.stream())

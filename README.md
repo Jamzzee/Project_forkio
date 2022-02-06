@@ -12,7 +12,7 @@ Media for 320px
 
 Media for 768px
 @media (min-width="481px") and (max-width="992px") {
-
+s
 }
 
 Media for 1200px
