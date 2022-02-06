@@ -63,6 +63,34 @@ a {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+header {
+  background-attachment: fixed;
+}
+
+.hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero__menu {
+  margin-left: 320px;
+}
+.hero__menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.hero__menu-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+=======
 .header {
   background-image: url("../../../dist/images/header-background.png");
   background-size: cover;
@@ -89,4 +117,5 @@ a {
   color: white;
   display: inline-block;
   margin-left: 20px;
+>>>>>>> 5d337cf6f1665a9486608c9606258b7520ae5036
 }
