@@ -1,7 +1,7 @@
 .header {
 	background-image: url("../../../dist/images/header-background.png");
 	background-size: cover;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 	background-position: center;
 	
 
@@ -83,39 +83,42 @@
 	}
 }
 
-.hero__menu{
+.hero__top {}
+
+.hero__menu {
 	@include flex(flex-end);
 	margin-top:20px;
 	margin-right: 110px;
 
 
-	&-list{
+	&-list {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		margin-top:-70px;
 
-		
+
 	}
 
-	&-item{
-		
-		padding-right:48px;
+	&-item {
+
+		padding-right: 48px;
 	}
 
-	&-link{
+	&-link {
 		color: white;
 	}
 
-	&-buy-link{
+	&-buy-link {
 		color: white;
-		display:inline-block;
+		display: inline-block;
 		margin-left: 20px;
 		margin-top:-70px;
 
 	}
 
 }
+
 
 
 
@@ -161,6 +164,8 @@
 // 	}
 
 // }
+
+
 
 
 
