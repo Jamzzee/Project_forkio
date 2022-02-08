@@ -14,9 +14,9 @@
 	display: flex;
 
 
-	&-img {}
+	// &-img {}
 
-	&-title {}
+	// &-title {}
 }
 
 .hero__logo {
@@ -78,7 +78,7 @@
 	}
 }
 
-.hero__top {}
+// .hero__top {}
 
 .hero__menu {
 	@include flex(flex-end);
