@@ -9,8 +9,6 @@
 
 }
 
-
-
 .hero_logo {
 	display: flex;
 
@@ -27,25 +25,35 @@
 }
 
 
-
-.hero__button {
-	position: relative;
-	display: flex;
-	cursor: pointer;
-
+.hero__menu {
+	@include flex(flex-end);
+	margin-top: 20px;
+	margin-right: 110px;
 
 
-	justify-content: center;
+	&-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: -70px;
+	}
 
-	margin-top: 380px;
-	&-download {
-		color: #fff;
-		position: absolute;
-		
-		text-transform: capitalize;
+	&-item {
+		padding-right: 48px;
+	}
+
+	&-link {
+		color: white;
+
+	}
+
+	&-buy-link {
+		color: white;
+		display: inline-block;
+		margin-left: 20px;
+		margin-top: -70px;
 	}
 }
-
 
 
 .hero__info {
@@ -83,43 +91,22 @@
 	}
 }
 
-// .hero__top {}
+.hero__button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
 
-.hero__menu {
-	@include flex(flex-end);
-	margin-top: 20px;
-	margin-right: 110px;
+	margin-top: 380px;
 
-
-	&-list {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-top: -70px;
-
-
+	&-download {
+		position: absolute;
+		text-transform: capitalize;
+		color: #fff;
 	}
-
-	&-item {
-
-		padding-right: 48px;
-	}
-
-	&-link {
-		color: white;
-		
-	}
-
-	&-buy-link {
-		color: white;
-		display: inline-block;
-		margin-left: 20px;
-		margin-top: -70px;
-
-
-	}
-
 }
+
+
 
 
 
