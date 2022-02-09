@@ -1,95 +1,151 @@
 .header {
-	height: 800px;
+	max-height: 800px;
 	background-image: url("../../../dist/images/header-background.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center 66%;
-
-
-
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	background-position: center;
 }
 
-.hero_logo {
-	display: flex;
-
-
-	// &-img {}
-
-	// &-title {}
+.hero {
+	@include flex;
+	justify-content: flex-end;
+	padding-top: 1.9em;
 }
+
 
 .hero__logo {
+	@include flex;
+	gap: 1em;
+	margin-right: 19.5em;
 
-	@include flex(flex-start);
-
-}
-
-
-.hero__menu {
-	@include flex(flex-end);
-	margin-top: 20px;
-	margin-right: 110px;
-
-
-	&-list {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-top: -70px;
+	&-img {
+		// width: 100%;
 	}
 
-	&-item {
-		padding-right: 48px;
+	&-title {
+		font-family: $secondary-fonts;
+		font-weight: 700;
+		color: $title-color-text;
+		text-transform: uppercase;
+		font-size: rem(24);
+		line-height: rem(16);
+	}
+}
+
+.hero__menu {
+
+	margin-right: 4.2em;
+
+	&-list {
+		@include flex;
+		gap: 3em;
 	}
 
 	&-link {
-		color: white;
-
-	}
-
-	&-buy-link {
-		color: white;
-		display: inline-block;
-		margin-left: 20px;
-		margin-top: -70px;
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: rem(17);
+		color: $title-color-text;
+		text-transform: capitalize;
 	}
 }
 
-
-.hero__info {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 126px;
-
-	&-title {
-		font-size: 82px;
-		line-height: 82px;
-		color: white;
-		font-weight: bold;
-		font-family: Montserrat;
-	}
-
-	&-subtitle {
-		margin-top: 19px;
-		font-family: Lato;
-		font-size: 30px;
-		line-height: 30px;
-		color: #8D81AC;
-
-	}
-
-	&-text {
-		margin-top: 19px;
-		font-family: Montserrat;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 16px;
-		color: #848E97;
-
+.hero__buy {
+	&-link {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		color: $title-color;
+		font-size: rem(16);
+		line-height: rem(17);
+		text-transform: capitalize;
+		padding-inline: 1.25em;
+		padding-block: 0.6em;
+		background-color: $title-color-text;
+		border: solid $title-color-text;
+		border-radius: 2.5em;
 	}
 }
+
+// .hero_logo {
+// 	display: flex;
+
+// 	// &-img {}
+
+// 	// &-title {}
+// }
+
+// .hero__logo {
+
+// 	@include flex(flex-start);
+
+// }
+
+
+// .hero__menu {
+// 	@include flex(flex-end);
+// 	margin-top: 20px;
+// 	margin-right: 110px;
+
+
+// 	&-list {
+// 		display: flex;
+// 		flex-direction: row;
+// 		justify-content: space-between;
+// 		margin-top: -70px;
+// 	}
+
+// 	&-item {
+// 		padding-right: 48px;
+// 	}
+
+// }
+
+// &-link {
+// 	color: white;
+// }
+
+// &-buy-link {
+// 	color: white;
+// 	display: inline-block;
+// 	margin-left: 20px;
+// 	margin-top: -70px;
+// }
+
+// .hero__info {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	margin-top: 126px;
+
+// 	&-title {
+// 		font-size: 82px;
+// 		line-height: 82px;
+// 		color: white;
+// 		font-weight: bold;
+// 		font-family: Montserrat;
+// 	}
+
+// 	&-subtitle {
+// 		margin-top: 19px;
+// 		font-family: Lato;
+// 		font-size: 30px;
+// 		line-height: 30px;
+// 		color: #8D81AC;
+
+// 	}
+
+// 	&-text {
+// 		margin-top: 19px;
+// 		font-family: Montserrat;
+// 		font-size: 16px;
+// 		font-style: normal;
+// 		font-weight: 400;
+// 		line-height: 16px;
+// 		color: #848E97;
+
+// 	}
+// }
 
 .hero__button {
 	position: relative;

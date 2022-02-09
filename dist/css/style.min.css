@@ -70,77 +70,65 @@ a {
 }
 
 .header {
-  height: 800px;
+  max-height: 800px;
   background-image: url("../../../dist/images/header-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 66%;
+  background-position: center;
 }
 
-.hero_logo {
+.hero {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 1.9em;
 }
 
 .hero__logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  gap: 1em;
+  margin-right: 19.5em;
+}
+.hero__logo-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #8D81AC;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1rem;
 }
 
 .hero__menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 20px;
-  margin-right: 110px;
+  margin-right: 4.2em;
 }
 .hero__menu-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: -70px;
-}
-.hero__menu-item {
-  padding-right: 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
 }
 .hero__menu-link {
-  color: white;
-}
-.hero__menu-buy-link {
-  color: white;
-  display: inline-block;
-  margin-left: 20px;
-  margin-top: -70px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.0625rem;
+  color: #8D81AC;
+  text-transform: capitalize;
 }
 
-.hero__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 126px;
-}
-.hero__info-title {
-  font-size: 82px;
-  line-height: 82px;
-  color: white;
-  font-weight: bold;
-  font-family: Montserrat;
-}
-.hero__info-subtitle {
-  margin-top: 19px;
-  font-family: Lato;
-  font-size: 30px;
-  line-height: 30px;
-  color: #8D81AC;
-}
-.hero__info-text {
-  margin-top: 19px;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-  color: #848E97;
+.hero__buy-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.0625rem;
+  text-transform: capitalize;
+  padding-inline: 1.25em;
+  padding-block: 0.6em;
+  background-color: #8D81AC;
+  border: solid #8D81AC;
+  border-radius: 2.5em;
 }
 
 .hero__button {
