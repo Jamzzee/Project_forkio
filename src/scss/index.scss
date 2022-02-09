@@ -3,6 +3,12 @@
 @import "./helpers/mixins";
 
 
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
 // @media((min-width: 320px) and (max-width:480px)){
 
 

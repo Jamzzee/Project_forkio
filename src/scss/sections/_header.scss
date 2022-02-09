@@ -1,52 +1,84 @@
 .header {
-	height: 800px;
+	max-height: 800px;
 	background-image: url("../../../dist/images/header-background.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center 66%;
-
-
-
-}
-
-
-
-.hero_logo {
-	display: flex;
-
-
-	// &-img {}
-
-	// &-title {}
 }
 
 .hero__logo {
-
+	display: flex;
+	
+	color: #8D81AC;
 	@include flex(flex-start);
 
-}
-
-
-
-.hero__button {
-	position: relative;
-	display: flex;
-	cursor: pointer;
-
-
-
-	justify-content: center;
-
-	margin-top: 380px;
-	&-download {
-		color: #fff;
-		position: absolute;
-		
-		text-transform: capitalize;
+	&-title{
+		color: #8D81AC;
+		margin-left: 17px;
 	}
+
+	&:hover{
+		color:white;
+	}
+
 }
 
 
+
+.hero__menu {
+	@include flex(flex-end);
+	margin-top: 14px;
+	margin-right: 110px;
+
+
+	&-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: -70px;
+
+
+	}
+
+	&-item {
+
+		padding-right: 48px;
+	}
+
+	&-link {
+		color: #8D81AC;
+		
+	}
+
+	&-buy-link {
+		border:2px solid #8D81AC;
+		background-color: #8D81AC;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 17px;
+		border-radius:40px;
+		padding: 11px 20px 11px 20px;
+		color: white;
+		display: inline-block;
+		margin-left: 20px;
+		margin-top: -70px;
+
+
+	}
+
+
+	&-link:hover {
+		color: white;
+		
+	}
+
+	&-buy-link:hover {
+		color: #8D81AC;
+		background-color: white;
+	}
+
+
+
+}
 
 .hero__info {
 	display: flex;
@@ -83,90 +115,48 @@
 	}
 }
 
-// .hero__top {}
-
-.hero__menu {
-	@include flex(flex-end);
-	margin-top: 20px;
-	margin-right: 110px;
+.hero__button {
+	position: relative;
+	display: flex;
+	cursor: pointer;
 
 
-	&-list {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-top: -70px;
 
+	justify-content: center;
 
-	}
+	margin-top: 386px;
+	&-download {
+		border: 1px solid #8D81AC;
+		border-radius: 40px;
 
-	&-item {
-
-		padding-right: 48px;
-	}
-
-	&-link {
-		color: white;
 		
+		padding: 23px 60px 23px 60px;
+		font-size: 21px;
+		background: #8D81AC;
+		line-height:22px;
+		color: #fff;
+		position: absolute;
+		
+		text-transform: capitalize;
+
+
 	}
 
-	&-buy-link {
-		color: white;
-		display: inline-block;
-		margin-left: 20px;
-		margin-top: -70px;
-
+	&-download:hover{
+		background: white;
+		color: #8D81AC;
 
 	}
+
 
 }
 
 
 
+// .hero__top {}
 
 
 
-// .hero{
-// 	@include flex();
-
-
-// 	&__menu{
-
-// 		// @include flex();
-// 		// flex-direction: row;
-// 		// justify-content: center;
-
-// 		&-item{}
-
-
-
-
-// 		&-list{
-
-// 			display: flex;
-// 			flex-direction: row;
-
-
-
-// 			// @include flex(center);
-// 			// padding-right: 48px;
-
-
-// 		}
-
-// 		&-link{
-
-// 		}
-
-// 		&-buy{
-// 			// @include flex(flex-end);
-// 			// &-link{
-// 			// 	@include flex(flex-end);
-// 			// }
-// 		}
-// 	}
-
-// }
 
 
 
