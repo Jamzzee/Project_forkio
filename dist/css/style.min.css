@@ -64,10 +64,15 @@ a {
 }
 
 .header {
+  height: 800px;
   background-image: url("../../../dist/images/header-background.png");
   background-size: cover;
   background-repeat: no-repeat;
+<<<<<<< HEAD
   background-position: center;
+=======
+  background-position: center 66%;
+>>>>>>> dca5177b8dda56411b4011f416a37bcebb2fb51a
 }
 
 .hero_logo {
@@ -85,10 +90,11 @@ a {
   display: flex;
   cursor: pointer;
   justify-content: center;
+  margin-top: 380px;
 }
 .hero__button-download {
+  color: #fff;
   position: absolute;
-  top: -10px;
   text-transform: capitalize;
 }
 
