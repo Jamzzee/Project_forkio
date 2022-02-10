@@ -90,6 +90,9 @@ a {
   gap: 1em;
   margin-right: 19.5em;
 }
+.hero__logo-img {
+  width: 100%;
+}
 .hero__logo-title {
   font-family: "Lato", sans-serif;
   font-weight: 700;
