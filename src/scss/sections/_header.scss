@@ -1,4 +1,5 @@
 .header {
+	position: relative;
 	max-height: 800px;
 	background-image: url("../../../dist/images/header-background.png");
 	// background-size: cover;
@@ -9,7 +10,8 @@
 .hero {
 	@include flex;
 	justify-content: flex-end;
-	padding-top: 1.9em;
+	padding-block: 1.9em;
+	
 }
 
 
@@ -19,13 +21,16 @@
 	margin-right: 19.5em;
 
 	&-svg {
-		width: 100%;
-		
+		background-image:url(../../images/pencil-logo-svg.svg);
+		z-index:1;
 	}
 
-	&-svg:hover{
-		fill: red;
+	&-svg:hover {
+		background-image: url(../../images/logo-hover-svg.svg);
+
 	}
+
+
 
 	&-title {
 		font-family: $secondary-fonts;
@@ -35,7 +40,12 @@
 		font-size: rem(24);
 		line-height: rem(16);
 	}
+
+
+
 }
+
+
 
 .hero__menu {
 
@@ -54,9 +64,15 @@
 		color: $title-color-text;
 		text-transform: capitalize;
 	}
+
+	:hover{
+
+		color:$title-color;
+	}
 }
 
 .hero__buy {
+
 	&-link {
 		font-family: $primary-fonts;
 		font-weight: 700;
@@ -67,154 +83,88 @@
 		padding-inline: 1.25em;
 		padding-block: 0.6em;
 		background-color: $title-color-text;
-		border: solid $title-color-text;
+		border: 1px solid $title-color-text;
 		border-radius: 2.5em;
 	}
-}
 
-// .hero_logo {
-// 	display: flex;
-
-// 	// &-img {}
-
-// 	// &-title {}
-// }
-
-// .hero__logo {
-
-// 	@include flex(flex-start);
-
-// }
-
-
-// .hero__menu {
-// 	@include flex(flex-end);
-// 	margin-top: 20px;
-// 	margin-right: 110px;
-
-
-// 	&-list {
-// 		display: flex;
-// 		flex-direction: row;
-// 		justify-content: space-between;
-// 		margin-top: -70px;
-// 	}
-
-// 	&-item {
-// 		padding-right: 48px;
-// 	}
-
-// }
-
-// &-link {
-// 	color: white;
-// }
-
-// &-buy-link {
-// 	color: white;
-// 	display: inline-block;
-// 	margin-left: 20px;
-// 	margin-top: -70px;
-// }
-
-// .hero__info {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	margin-top: 126px;
-
-// 	&-title {
-// 		font-size: 82px;
-// 		line-height: 82px;
-// 		color: white;
-// 		font-weight: bold;
-// 		font-family: Montserrat;
-// 	}
-
-// 	&-subtitle {
-// 		margin-top: 19px;
-// 		font-family: Lato;
-// 		font-size: 30px;
-// 		line-height: 30px;
-// 		color: #8D81AC;
-
-// 	}
-
-// 	&-text {
-// 		margin-top: 19px;
-// 		font-family: Montserrat;
-// 		font-size: 16px;
-// 		font-style: normal;
-// 		font-weight: 400;
-// 		line-height: 16px;
-// 		color: #848E97;
-
-// 	}
-// }
-
-.hero__button {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	cursor: pointer;
-
-	margin-top: 380px;
-
-	&-download {
-		position: absolute;
-		text-transform: capitalize;
-		color: #fff;
+	:hover{
+		background-color: $bg-white-color;
+		color:$title-color-text;
 	}
 }
 
 
+.hero__info{
+
+	margin-top:5.1em;
+	text-align: center;
+	&-title{
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size:rem(82);
+		color: $title-color;
+	}
+
+	&-subtitle{
+		font-family: $secondary-fonts;
+		font-weight: 400;
+		font-size:rem(30);
+		color:$title-color-text;
+		margin-top:1.1em;
+
+	}
+
+	&-text{
+		display: inline-block;
+		text-transform: uppercase;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		font-size: rem(16);
+		color:$text-color;
+		
+		margin-top: 1.1em;
+		margin-bottom: 28em;
+	}
+}
+
+.hero__button{
+
+	
+	position: absolute;
+	right: 50%;
+	bottom:-2.5em;
+	transform: translate(50%);
+
+
+
+	&-download{
+
+		
+		display: inline-block;
+		font-family: $primary-fonts;
+		font-weight:700;
+		font-size: rem(21);
+		line-height:rem(22);
+		text-transform: capitalize;
+		color:$title-color;
+		padding-block: 1.4em;
+		padding-inline: 3.8em;
+		border: 2px solid $title-color-text;
+		border-radius: 40px;
+		background: $title-color-text;
+
+	}
+
+	:hover{
+		background-color: $bg-white-color;
+		color:$title-color-text;
+	}
+
+}
 
 
 
 
-
-
-// .hero{
-// 	@include flex();
-
-
-// 	&__menu{
-
-// 		// @include flex();
-// 		// flex-direction: row;
-// 		// justify-content: center;
-
-// 		&-item{}
-
-
-
-
-// 		&-list{
-
-// 			display: flex;
-// 			flex-direction: row;
-
-
-
-// 			// @include flex(center);
-// 			// padding-right: 48px;
-
-
-// 		}
-
-// 		&-link{
-
-// 		}
-
-// 		&-buy{
-// 			// @include flex(flex-end);
-// 			// &-link{
-// 			// 	@include flex(flex-end);
-// 			// }
-// 		}
-// 	}
-
-// }
 
 
 
