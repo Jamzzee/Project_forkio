@@ -97,13 +97,6 @@ a {
   gap: 1em;
   margin-right: 19.5em;
 }
-.hero__logo-svg {
-  background-image: url(../../images/pencil-logo-svg.svg);
-  z-index: 1;
-}
-.hero__logo-svg:hover {
-  background-image: url(../../images/logo-hover-svg.svg);
-}
 .hero__logo-title {
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -111,6 +104,18 @@ a {
   text-transform: uppercase;
   font-size: 1.5rem;
   line-height: 1rem;
+}
+.hero__logo-title:hover {
+  color: #fff;
+}
+.hero__logo-svg {
+  width: 43px;
+  height: 41px;
+  background: url(../../images/pencil-logo.png) no-repeat;
+}
+
+.hero__logo:hover .hero__logo-svg {
+  background: url(../../images/logo-hover.png) no-repeat;
 }
 
 .hero__menu {

@@ -16,20 +16,11 @@
 
 
 .hero__logo {
+
+
 	@include flex;
 	gap: 1em;
 	margin-right: 19.5em;
-
-	&-svg {
-		background-image:url(../../images/pencil-logo-svg.svg);
-		z-index:1;
-	}
-
-	&-svg:hover {
-		background-image: url(../../images/logo-hover-svg.svg);
-
-	}
-
 
 
 	&-title {
@@ -41,11 +32,25 @@
 		line-height: rem(16);
 	}
 
+	
 
+	&-title:hover{
+		color: #fff;
+	}
+
+	&-svg{
+		width: 43px;
+      	height: 41px;
+		background:url(../../images/pencil-logo.png) no-repeat;
+	}
 
 }
 
-
+.hero__logo:hover{
+	.hero__logo-svg{
+		background:url(../../images/logo-hover.png) no-repeat;
+	}
+}
 
 .hero__menu {
 
