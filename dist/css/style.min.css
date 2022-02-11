@@ -129,7 +129,10 @@ a {
   border-right: 2px solid #d5d5d5;
 }
 .editor__info-actions-wrap-watch-icon, .editor__info-actions-wrap-star-icon, .editor__info-actions-wrap-fork-icon {
-  fill: black;
+  fill: #333333;
+}
+.editor__info-actions-wrap-watch .fa-eye, .editor__info-actions-wrap-star .fa-eye, .editor__info-actions-wrap-fork .fa-eye {
+  color: #333333;
 }
 .editor__info-actions-wrap-watch-text, .editor__info-actions-wrap-star-text, .editor__info-actions-wrap-fork-text {
   padding-left: 0.125em;
