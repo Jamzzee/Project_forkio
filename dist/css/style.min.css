@@ -158,10 +158,18 @@ a {
   color: #8D81AC;
   transition: 0.1s;
 }
+<<<<<<< HEAD
 
 .hero__info {
   margin-top: 5.1em;
   text-align: center;
+=======
+.editor__info-actions-wrap-watch-icon, .editor__info-actions-wrap-star-icon, .editor__info-actions-wrap-fork-icon {
+  fill: #333333;
+}
+.editor__info-actions-wrap-watch .fa-eye, .editor__info-actions-wrap-star .fa-eye, .editor__info-actions-wrap-fork .fa-eye {
+  color: #333333;
+>>>>>>> revolution
 }
 .hero__info-title {
   font-family: "Montserrat", sans-serif;
