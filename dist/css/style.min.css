@@ -1,0 +1,281 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header {
+  position: relative;
+  max-height: 800px;
+  background-image: url("../../../dist/images/back-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  padding-block: 1.9em;
+}
+
+.hero__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-right: 19.5em;
+}
+.hero__logo-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #8D81AC;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+.hero__logo-title:hover {
+  color: #fff;
+}
+.hero__logo-img {
+  display: inline-block;
+}
+
+.hero__logo:hover {
+  filter: brightness(0) invert(1);
+}
+
+.hero__menu {
+  margin-right: 4.2em;
+}
+.hero__menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+.hero__menu-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.0625rem;
+  color: #8D81AC;
+  text-transform: capitalize;
+}
+.hero__menu :hover {
+  color: #FFFFFF;
+  transition: 0.1s;
+}
+
+.hero__buy-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.0625rem;
+  text-transform: capitalize;
+  padding-inline: 1.25em;
+  padding-block: 0.6em;
+  background-color: #8D81AC;
+  border: 1px solid #8D81AC;
+  border-radius: 2.5em;
+}
+.hero__buy :hover {
+  background-color: #FFFFFF;
+  color: #8D81AC;
+  transition: 0.1s;
+}
+
+.hero__info {
+  margin-top: 5.1em;
+  text-align: center;
+}
+.hero__info-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 5.125rem;
+  color: #FFFFFF;
+}
+.hero__info-subtitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #8D81AC;
+  margin-top: 1.1em;
+}
+.hero__info-text {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #848E97;
+  margin-top: 1.1em;
+  margin-bottom: 28em;
+}
+
+.hero__button {
+  position: absolute;
+  right: 50%;
+  bottom: -2.5em;
+  transform: translate(50%);
+}
+.hero__button-download {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.3125rem;
+  line-height: 1.375rem;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  padding-block: 1.4em;
+  padding-inline: 3.8em;
+  border: 2px solid #8D81AC;
+  border-radius: 40px;
+  background: #8D81AC;
+}
+.hero__button :hover {
+  background-color: #FFFFFF;
+  color: #8D81AC;
+  transition: 0.1s;
+}
+
+.editor__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.1em;
+  margin-bottom: 4.3em;
+  background: #FFFFFF;
+}
+.editor__info-trial {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 0.9375rem;
+  color: #848E97;
+  margin-bottom: 4.1em;
+}
+.editor__info-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3.375rem;
+  color: #635C73;
+  margin-bottom: 1em;
+}
+.editor__info-subtitle {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 2rem;
+  color: #323232;
+  margin-bottom: 0.8em;
+}
+.editor__info-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.editor__info-actions-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d5d5d5;
+  border-radius: 3px;
+}
+.editor__info-actions-wrap-watch, .editor__info-actions-wrap-star, .editor__info-actions-wrap-fork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(221, 222, 222, 0.8046568969) 0%, rgba(238, 238, 239, 0.4993347681) 46%, white 100%);
+  padding-inline: 0.7em;
+  padding-block: 0.5em;
+  border-right: 2px solid #d5d5d5;
+}
+.editor__info-actions-wrap-watch-icon, .editor__info-actions-wrap-star-icon, .editor__info-actions-wrap-fork-icon {
+  fill: #333333;
+}
+.editor__info-actions-wrap-watch .fa-eye, .editor__info-actions-wrap-star .fa-eye, .editor__info-actions-wrap-fork .fa-eye {
+  color: #333333;
+}
+.editor__info-actions-wrap-watch-text, .editor__info-actions-wrap-star-text, .editor__info-actions-wrap-fork-text {
+  padding-left: 0.125em;
+}
+.editor__info-actions-wrap-watch-info, .editor__info-actions-wrap-star-info, .editor__info-actions-wrap-fork-info {
+  padding-inline: 0.7em;
+  padding-block: 0.5em;
+}
