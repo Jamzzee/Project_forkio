@@ -11,17 +11,12 @@
 	@include flex;
 	justify-content: flex-end;
 	padding-block: 1.9em;
-	
 }
 
-
 .hero__logo {
-
-
 	@include flex;
 	gap: 1em;
 	margin-right: 19.5em;
-
 
 	&-title {
 		font-family: $secondary-fonts;
@@ -32,38 +27,21 @@
 		line-height: rem(16);
 	}
 
-
-	&-title:hover{
+	&-title:hover {
 		color: #fff;
 	}
 
-	&-img{
-		
-		display: block;
-		
-
-		&-hover{
-			display: block;
-		}
+	&-img {
+		display: inline-block;
 	}
-
-	// &-img-hover{
-		
-	// 	display: block;
-	// 	opacity: 0;
-	// }
-
 
 }
 
 .hero__logo:hover {
-
 	filter: brightness(0) invert(1);
-
 }
 
 .hero__menu {
-
 	margin-right: 4.2em;
 
 	&-list {
@@ -80,14 +58,13 @@
 		text-transform: capitalize;
 	}
 
-	:hover{
-
-		color:$title-color;
+	:hover {
+		color: $title-color;
+		transition: 0.1s;
 	}
 }
 
 .hero__buy {
-
 	&-link {
 		font-family: $primary-fonts;
 		font-weight: 700;
@@ -102,79 +79,71 @@
 		border-radius: 2.5em;
 	}
 
-	:hover{
+	:hover {
 		background-color: $bg-white-color;
-		color:$title-color-text;
+		color: $title-color-text;
+		transition: 0.1s;
 	}
 }
 
-
-.hero__info{
-
-	margin-top:5.1em;
+.hero__info {
+	margin-top: 5.1em;
 	text-align: center;
-	&-title{
+
+	&-title {
 		font-family: $primary-fonts;
 		font-weight: 700;
-		font-size:rem(82);
+		font-size: rem(82);
 		color: $title-color;
 	}
 
-	&-subtitle{
+	&-subtitle {
 		font-family: $secondary-fonts;
 		font-weight: 400;
-		font-size:rem(30);
-		color:$title-color-text;
-		margin-top:1.1em;
+		font-size: rem(30);
+		color: $title-color-text;
+		margin-top: 1.1em;
 
 	}
 
-	&-text{
+	&-text {
 		display: inline-block;
 		text-transform: uppercase;
 		font-family: $primary-fonts;
 		font-weight: 400;
 		font-size: rem(16);
-		color:$text-color;
-		
+		color: $text-color;
 		margin-top: 1.1em;
 		margin-bottom: 28em;
 	}
 }
 
-.hero__button{
-
-	
+.hero__button {
 	position: absolute;
 	right: 50%;
-	bottom:-2.5em;
+	bottom: -2.5em;
 	transform: translate(50%);
 
-
-
-	&-download{
-
-		
+	&-download {
 		display: inline-block;
 		font-family: $primary-fonts;
-		font-weight:700;
+		font-weight: 700;
 		font-size: rem(21);
-		line-height:rem(22);
+		line-height: rem(22);
 		text-transform: capitalize;
-		color:$title-color;
+		color: $title-color;
 		padding-block: 1.4em;
 		padding-inline: 3.8em;
 		border: 2px solid $title-color-text;
 		border-radius: 40px;
 		background: $title-color-text;
-
 	}
 
-	:hover{
+	:hover {
 		background-color: $bg-white-color;
-		color:$title-color-text;
+		color: $title-color-text;
+		transition: 0.1s;
 	}
-
 }
 
 
