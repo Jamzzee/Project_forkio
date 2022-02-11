@@ -1,14 +1,162 @@
-@media((min-width: 320px) and (max-width:480px)){
+.header {
+	position: relative;
+	max-height: 800px;
+	background-image: url("../../../dist/images/header-background.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
+.hero {
+	@include flex;
+	justify-content: flex-end;
+	padding-block: 1.9em;
+}
+
+.hero__logo {
+	@include flex;
+	gap: 1em;
+	margin-right: 19.5em;
+
+	&-title {
+		font-family: $secondary-fonts;
+		font-weight: 700;
+		color: $title-color-text;
+		text-transform: uppercase;
+		font-size: rem(24);
+		line-height: rem(16);
+	}
+
+	&-title:hover {
+		color: #fff;
+	}
+
+	&-img {
+		display: inline-block;
+	}
 
 }
 
-@media((min-width: 481px) and (max-width:992px)){
-    
-
+.hero__logo:hover {
+	filter: brightness(0) invert(1);
 }
 
-@media((min-width: 993px) and (max-width:1200px)){
-    
+.hero__menu {
+	margin-right: 4.2em;
 
+	&-list {
+		@include flex;
+		gap: 3em;
+	}
+
+	&-link {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: rem(17);
+		color: $title-color-text;
+		text-transform: capitalize;
+	}
+
+	:hover {
+		color: $title-color;
+		transition: 0.1s;
+	}
 }
+
+.hero__buy {
+	&-link {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		color: $title-color;
+		font-size: rem(16);
+		line-height: rem(17);
+		text-transform: capitalize;
+		padding-inline: 1.25em;
+		padding-block: 0.6em;
+		background-color: $title-color-text;
+		border: 1px solid $title-color-text;
+		border-radius: 2.5em;
+	}
+
+	:hover {
+		background-color: $bg-white-color;
+		color: $title-color-text;
+		transition: 0.1s;
+	}
+}
+
+.hero__info {
+	margin-top: 5.1em;
+	text-align: center;
+
+	&-title {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(82);
+		color: $title-color;
+	}
+
+	&-subtitle {
+		font-family: $secondary-fonts;
+		font-weight: 400;
+		font-size: rem(30);
+		color: $title-color-text;
+		margin-top: 1.1em;
+
+	}
+
+	&-text {
+		display: inline-block;
+		text-transform: uppercase;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		font-size: rem(16);
+		color: $text-color;
+		margin-top: 1.1em;
+		margin-bottom: 28em;
+	}
+}
+
+.hero__button {
+	position: absolute;
+	right: 50%;
+	bottom: -2.5em;
+	transform: translate(50%);
+
+	&-download {
+		display: inline-block;
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(21);
+		line-height: rem(22);
+		text-transform: capitalize;
+		color: $title-color;
+		padding-block: 1.4em;
+		padding-inline: 3.8em;
+		border: 2px solid $title-color-text;
+		border-radius: 40px;
+		background: $title-color-text;
+	}
+
+	:hover {
+		background-color: $bg-white-color;
+		color: $title-color-text;
+		transition: 0.1s;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+// @media((min-width: 320px) and (max-width:480px)) {}
+
+// @media((min-width: 481px) and (max-width:992px)) {}
+
+// @media((min-width: 993px) and (max-width:1200px)) {}
