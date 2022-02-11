@@ -2,8 +2,8 @@
 	position: relative;
 	max-height: 800px;
 	background-image: url("../../../dist/images/header-background.png");
-	// background-size: cover;
-	// background-repeat: no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
@@ -16,20 +16,11 @@
 
 
 .hero__logo {
+
+
 	@include flex;
 	gap: 1em;
 	margin-right: 19.5em;
-
-	&-svg {
-		background-image:url(../../images/pencil-logo-svg.svg);
-		z-index:1;
-	}
-
-	&-svg:hover {
-		background-image: url(../../images/logo-hover-svg.svg);
-
-	}
-
 
 
 	&-title {
@@ -42,10 +33,34 @@
 	}
 
 
+	&-title:hover{
+		color: #fff;
+	}
+
+	&-img{
+		
+		display: block;
+		
+
+		&-hover{
+			display: block;
+		}
+	}
+
+	// &-img-hover{
+		
+	// 	display: block;
+	// 	opacity: 0;
+	// }
+
 
 }
 
+.hero__logo:hover {
 
+	filter: brightness(0) invert(1);
+
+}
 
 .hero__menu {
 
