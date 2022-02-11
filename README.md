@@ -5,7 +5,7 @@
 Решили делать весь проект вместе.
 Media reqierements for 320px, 768px, 1200px.
 
-Media for 320px
+Media for 320px 
 @media (min-width="320px") and (max-width="480px") {
 
 }
@@ -22,8 +22,9 @@ Media for 1200px
 
 .container {
     max-width: 1200px;
-    margin:0, auto;
-    padding-inline:10px
+    margin:0 auto;
+    padding-inline:10px;
+    box-sizing: border-box;
 }
 
 *Макет 1200 показывает как будет выглядеть контент при ширине экрана 993-1200 пикселей. То есть там где в макете 768 где-то было две колонки, а в макете 1200 четыре, смена с двух на четыре должна происходить при достижении ширины экрана 993 пикселя.
