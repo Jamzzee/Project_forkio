@@ -292,7 +292,7 @@ a {
   flex-direction: column;
   align-items: center;
   padding-top: 6.7em;
-  padding-bottom: 1.2em;
+  padding-bottom: 1.8em;
 }
 .people__content-title {
   font-family: "Montserrat", sans-serif;
@@ -304,9 +304,16 @@ a {
 .people__content-wrap {
   display: grid;
   grid-template-columns: repeat(3, 315px);
+  align-items: baseline;
   row-gap: 7em;
   column-gap: 6.8em;
   margin-top: 5.1em;
+}
+.people__content-item {
+  text-align: center;
+}
+.people__content-item img {
+  padding-bottom: 1.8em;
 }
 .people__content-item-text {
   font-family: "Lato", sans-serif;
@@ -316,23 +323,21 @@ a {
   line-height: 1.5rem;
   color: #ffffff;
 }
-.people__content-item img {
-  padding-bottom: 1.8em;
-}
 .people__content-footer {
+  display: inline-block;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3125rem;
   color: #A291A5;
+  max-width: 887px;
   margin-top: 7.2em;
+  margin-bottom: 0.9em;
   text-align: center;
 }
 .people__content-footer-line {
-  top: 0;
   background-color: #645766;
   height: 2px;
-  min-width: 780px;
+  width: 780px;
   border: none;
-  margin-top: 1.156em;
 }
