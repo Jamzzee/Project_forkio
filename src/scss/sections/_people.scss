@@ -1,3 +1,75 @@
+.people-background{
+    background-image:url(../../../dist/images/people-back.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+.people__content{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 6.7em;
+    padding-bottom: 1.2em;
+
+    &-title{
+        font-family: $primary-fonts;
+        font-weight: 700;
+        font-size: rem(48);
+        line-height: rem(50);
+        color:$title-color;
+        
+    }
+
+    &-wrap{       
+        display:grid;
+        grid-template-columns: repeat(3, 315px);
+        row-gap: 7em;
+        column-gap: 6.8em;
+        margin-top: 5.1em;
+
+
+    }
+
+    &-item{
+
+        &-text{
+            font-family: $secondary-fonts;
+            font-weight: 700;
+            font-style: italic;
+            font-size: rem(16);
+            line-height: rem(24);
+            color: $secondary-text-color;
+        }
+
+        img{
+            padding-bottom: 1.8em;
+        }
+    }
+
+    &-footer{
+
+        font-family: $secondary-fonts;
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: rem(21);
+        color: #A291A5;
+        margin-top:7.2em;
+        text-align: center;
+
+        &-line{
+            top: 0;
+            background-color:#645766;
+            height:2px;
+            min-width: 780px;
+            border:none;
+            margin-top:1.156em;
+        }
+
+    }
+
+}
+
 // @media((min-width: 320px) and (max-width:480px)){
 
 
