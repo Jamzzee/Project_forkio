@@ -1,9 +1,10 @@
 .pricing-background {
-	// here'll be background
+	background: rgba(74, 59, 78, 1);
 }
 
 .pricing__content {
 	padding-top: 5.1em;
+	padding-bottom: 9.3em;
 	//here'll be grid set
 
 	&-title {
@@ -11,9 +12,95 @@
 		font-weight: 700;
 		text-transform: capitalize;
 		text-align: center;
-		color: black;
+		color: $title-color;
 		font-size: rem(48);
 		line-height: rem(50);
+		margin-bottom: 2.5em;
+	}
+
+	&-wrap {
+		max-width: 256px;
+
+		&-title {
+			font-family: $primary-fonts;
+			font-weight: 400;
+			font-size: rem(24);
+			color: $secondary-text-color;
+			text-transform: uppercase;
+			text-align: center;
+			padding-block: 2.2em;
+			background: rgba(255, 255, 255, 0.06);
+		}
+
+		&-info {
+			@include flex;
+			flex-direction: column;
+			background: rgba(255, 255, 255, 0.11);
+
+			&-cost {
+				font-family: $primary-fonts;
+				font-weight: 700;
+				font-size: rem(60);
+				line-height: rem(90);
+				color: $secondary-text-color;
+				margin-top: .5em;
+				margin-bottom: .2em;
+			}
+
+			&-text {
+				position: relative;
+				font-size: rem(14);
+				line-height: rem(16);
+				margin-bottom: 4.5em;
+			}
+
+			&-text::before {
+				display: inline-block;
+				position: absolute;
+				content: "";
+				bottom: -2.5em;
+				left: 50%;
+				transform: translate(-50%, 50%);
+				min-width: 60px;
+				height: 5px;
+				background-color: #8D81AC;
+			}
+
+			&-line {
+				max-width: 60px;
+				height: 5px;
+				background-color: #8D81AC;
+				align-items: center;
+			}
+
+			&-license {
+				font-size: rem(16);
+				line-height: rem(18);
+				margin-bottom: 4.3em;
+			}
+
+			&-purchase {
+				font-size: rem(15);
+				text-transform: uppercase;
+				padding-block: .8em;
+				padding-inline: 2.2em;
+				margin-bottom: 3.7em;
+				background: rgba(255, 255, 255, 0.15);
+				border: none;
+				border-radius: 2.5em;
+				mix-blend-mode: normal;
+			}
+
+			&-text,
+			&-license,
+			&-purchase {
+				display: inline-block;
+				font-family: $primary-fonts;
+				font-weight: 400;
+				color: $secondary-text-color;
+			}
+
+		}
 	}
 }
 

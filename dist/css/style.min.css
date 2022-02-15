@@ -342,15 +342,95 @@ a {
   border: none;
 }
 
+.pricing-background {
+  background: #4a3b4e;
+}
+
 .pricing__content {
   padding-top: 5.1em;
+  padding-bottom: 9.3em;
 }
 .pricing__content-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
   text-align: center;
-  color: black;
+  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3.125rem;
+  margin-bottom: 2.5em;
+}
+.pricing__content-wrap {
+  max-width: 256px;
+}
+.pricing__content-wrap-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding-block: 2.2em;
+  background: rgba(255, 255, 255, 0.06);
+}
+.pricing__content-wrap-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.11);
+}
+.pricing__content-wrap-info-cost {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3.75rem;
+  line-height: 5.625rem;
+  color: #ffffff;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+}
+.pricing__content-wrap-info-text {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  margin-bottom: 4.5em;
+}
+.pricing__content-wrap-info-text::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  bottom: -2.5em;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  min-width: 60px;
+  height: 5px;
+  background-color: #8D81AC;
+}
+.pricing__content-wrap-info-line {
+  max-width: 60px;
+  height: 5px;
+  background-color: #8D81AC;
+  align-items: center;
+}
+.pricing__content-wrap-info-license {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  margin-bottom: 4.3em;
+}
+.pricing__content-wrap-info-purchase {
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  padding-block: 0.8em;
+  padding-inline: 2.2em;
+  margin-bottom: 3.7em;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 2.5em;
+  mix-blend-mode: normal;
+}
+.pricing__content-wrap-info-text, .pricing__content-wrap-info-license, .pricing__content-wrap-info-purchase {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
 }
