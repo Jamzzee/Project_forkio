@@ -341,3 +341,16 @@ a {
   width: 780px;
   border: none;
 }
+
+.pricing__content {
+  padding-top: 5.1em;
+}
+.pricing__content-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  color: black;
+  font-size: 3rem;
+  line-height: 3.125rem;
+}
