@@ -2,25 +2,24 @@
 	background: rgba(74, 59, 78, 1);
 }
 
+.pricing-title {
+	font-family: $primary-fonts;
+	font-weight: 700;
+	text-transform: capitalize;
+	text-align: center;
+	color: $title-color;
+	font-size: rem(48);
+	line-height: rem(50);
+	margin-bottom: 2.8em;
+	padding-top: 2em;
+}
+
 .pricing__content {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1em;
 	justify-content: center;
-	padding-top: 5.1em;
 	padding-bottom: 9.3em;
-
-	&-title {
-		font-family: $primary-fonts;
-		font-weight: 700;
-		text-transform: capitalize;
-		text-align: center;
-		color: $title-color;
-		font-size: rem(48);
-		line-height: rem(50);
-		margin-bottom: 2.5em;
-	}
-
 
 	&-wrap {
 

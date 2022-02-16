@@ -346,15 +346,7 @@ a {
   background: #4a3b4e;
 }
 
-.pricing__content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1em;
-  justify-content: center;
-  padding-top: 5.1em;
-  padding-bottom: 9.3em;
-}
-.pricing__content-title {
+.pricing-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
@@ -362,7 +354,16 @@ a {
   color: #FFFFFF;
   font-size: 3rem;
   line-height: 3.125rem;
-  margin-bottom: 2.5em;
+  margin-bottom: 2.8em;
+  padding-top: 2em;
+}
+
+.pricing__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  justify-content: center;
+  padding-bottom: 9.3em;
 }
 .pricing__content-wrap-title {
   font-family: "Montserrat", sans-serif;
