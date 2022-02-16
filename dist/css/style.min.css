@@ -381,6 +381,12 @@ a {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.11);
 }
+.pricing__content-wrap-info-text, .pricing__content-wrap-info-license, .pricing__content-wrap-info-purchase, .pricing__content-wrap-info-license-fix {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
 .pricing__content-wrap-info-cost {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -415,6 +421,14 @@ a {
   text-align: center;
   max-width: 211px;
 }
+.pricing__content-wrap-info-license-fix {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  margin-bottom: 5.4em;
+  text-transform: capitalize;
+  text-align: center;
+  max-width: 211px;
+}
 .pricing__content-wrap-info-purchase {
   font-size: 0.9375rem;
   text-transform: uppercase;
@@ -425,10 +439,4 @@ a {
   border: none;
   border-radius: 2.5em;
   mix-blend-mode: normal;
-}
-.pricing__content-wrap-info-text, .pricing__content-wrap-info-license, .pricing__content-wrap-info-purchase {
-  display: inline-block;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  color: #ffffff;
 }
