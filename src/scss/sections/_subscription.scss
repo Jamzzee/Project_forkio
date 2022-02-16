@@ -3,9 +3,12 @@
 }
 
 .pricing__content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1em;
+	justify-content: center;
 	padding-top: 5.1em;
 	padding-bottom: 9.3em;
-	//here'll be grid set
 
 	&-title {
 		font-family: $primary-fonts;
@@ -19,8 +22,6 @@
 	}
 
 	&-wrap {
-		max-width: 256px;
-
 		&-title {
 			font-family: $primary-fonts;
 			font-weight: 400;
@@ -66,18 +67,15 @@
 				background-color: #8D81AC;
 			}
 
-			&-line {
-				max-width: 60px;
-				height: 5px;
-				background-color: #8D81AC;
-				align-items: center;
-			}
-
 			&-license {
 				font-size: rem(16);
 				line-height: rem(18);
 				margin-bottom: 4.3em;
+				text-transform: capitalize;
+				text-align: center;
+				max-width: 211px;
 			}
+
 
 			&-purchase {
 				font-size: rem(15);
@@ -99,7 +97,6 @@
 				font-weight: 400;
 				color: $secondary-text-color;
 			}
-
 		}
 	}
 }
