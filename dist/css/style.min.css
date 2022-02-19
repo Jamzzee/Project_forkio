@@ -207,6 +207,63 @@ a {
   transition: 0.1s;
 }
 
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  height: 37px;
+  width: 44px;
+}
+.burger__line {
+  position: relative;
+  width: 26px;
+  height: 3px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}
+.burger__line:before {
+  position: absolute;
+  left: 11px;
+  background: #FFFFFF;
+  content: "";
+  width: 15px;
+  height: 3px;
+  transition: all 0.5s ease-in-out;
+}
+.burger__line:after {
+  position: absolute;
+  background: #FFFFFF;
+  content: "";
+  width: 26px;
+  height: 3px;
+  transition: all 0.5s ease-in-out;
+}
+.burger__line:before {
+  top: -4px;
+}
+.burger__line:after {
+  top: 4px;
+}
+
+.hero__menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.burger__line.close {
+  background: transparent;
+}
+.burger__line.close:before {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.burger__line.close:after {
+  transform: rotate(-45deg) translate(2px, -2px);
+}
+
 .editor__info {
   display: flex;
   justify-content: center;
