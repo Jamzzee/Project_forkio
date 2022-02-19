@@ -1,3 +1,151 @@
+.pricing-background {
+	background: rgba(74, 59, 78, 1);
+}
+
+.pricing-title {
+	font-family: $primary-fonts;
+	font-weight: 700;
+	text-transform: capitalize;
+	text-align: center;
+	color: $title-color;
+	font-size: rem(48);
+	line-height: rem(50);
+	margin-bottom: 2.8em;
+	padding-top: 2em;
+}
+
+.pricing__content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1em;
+	justify-content: center;
+	padding-bottom: 9.3em;
+
+	:nth-child(1) {
+		:nth-child(3) {
+			font-size: rem(16);
+			line-height: rem(18);
+			margin-bottom: 5.4em;
+			text-transform: capitalize;
+			text-align: center;
+			max-width: 211px;
+		}
+	}
+
+
+	:nth-child(3) {
+		width: 315px;
+		margin-top: -55px;
+
+		:nth-child(1) {
+			background: rgba(67, 48, 70, 0.84);
+		}
+
+		:nth-child(2) {
+			background: rgba(74, 55, 77, 0.84);
+
+			:nth-child(1) {
+				font-size: rem(82);
+				line-height: rem(90);
+				background: none;
+			}
+
+			:nth-child(3) {
+				margin-top: 40px;
+				margin-bottom: 120px;
+			}
+		}
+	}
+
+	&-wrap {
+		:nth-child(2) {
+			:nth-child(3) {
+				margin-top: 20px;
+			}
+		}
+
+		&-title {
+			font-family: $primary-fonts;
+			font-weight: 400;
+			font-size: rem(24);
+			display: block;
+			color: $secondary-text-color;
+			text-transform: uppercase;
+			text-align: center;
+			padding-block: 2.2em;
+			background: rgba(255, 255, 255, 0.06);
+		}
+
+		&-info {
+			@include flex;
+			flex-direction: column;
+			background: rgba(255, 255, 255, 0.11);
+
+			&-text,
+			&-license,
+			&-purchase {
+				display: inline-block;
+				font-family: $primary-fonts;
+				font-weight: 400;
+				color: $secondary-text-color;
+			}
+
+			&-cost {
+				font-family: $primary-fonts;
+				font-weight: 700;
+				font-size: rem(60);
+				line-height: rem(90);
+				color: $secondary-text-color;
+				margin-top: .5em;
+				margin-bottom: .2em;
+			}
+
+			&-text {
+				position: relative;
+				font-size: rem(14);
+				line-height: rem(16);
+				margin-bottom: 4.5em;
+				text-transform: uppercase;
+			}
+
+			&-text::before {
+				display: inline-block;
+				position: absolute;
+				content: "";
+				bottom: -2.5em;
+				left: 50%;
+				transform: translate(-50%, 50%);
+				min-width: 60px;
+				height: 5px;
+				background-color: #8D81AC;
+			}
+
+			&-license {
+				font-size: rem(16);
+				line-height: rem(18);
+				margin-bottom: 4.3em;
+				text-transform: capitalize;
+				text-align: center;
+				max-width: 211px;
+			}
+
+
+			&-purchase {
+				font-size: rem(15);
+				text-transform: uppercase;
+				padding-block: .8em;
+				padding-inline: 2.2em;
+				margin-bottom: 3.7em;
+				background: rgba(255, 255, 255, 0.15);
+				border: none;
+				border-radius: 2.5em;
+				mix-blend-mode: normal;
+			}
+		}
+	}
+}
+
+
 // @media((min-width: 320px) and (max-width:480px)){
 
 
