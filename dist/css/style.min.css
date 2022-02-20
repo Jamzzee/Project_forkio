@@ -66,6 +66,16 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-inline: 10px;
+}
+
+html {
+  font-size: 16px;
+}
+@media (min-width: 993px) and (max-width: 1199px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 .header {
@@ -424,13 +434,21 @@ a {
 .whatYouGet__code-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.9375rem;
   line-height: 3.125rem;
   color: #8D81AC;
-  margin-bottom: 1.1em;
+  padding-bottom: 0.5em;
+}
+@media (min-width: 993px) and (max-width: 1115px) {
+  .whatYouGet__code-title {
+    padding-bottom: 1.1em;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
 }
 .whatYouGet__code-image img {
   width: 100%;
+  min-height: 519px;
 }
 
 .people-background {
@@ -462,10 +480,15 @@ a {
   column-gap: 6.8em;
   margin-top: 5.1em;
 }
+@media (min-width: 993px) and (max-width: 1199px) {
+  .people__content-wrap {
+    column-gap: 0.8em;
+  }
+}
 .people__content-item {
   text-align: center;
 }
-.people__content-item img {
+.people__content-item-img {
   padding-bottom: 1.8em;
 }
 .people__content-item-text {
@@ -497,6 +520,7 @@ a {
 
 .pricing-background {
   background: #4a3b4e;
+  margin-top: -15px;
 }
 
 .pricing-title {
@@ -513,10 +537,16 @@ a {
 
 .pricing__content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 257px 257px 299px 257px;
   gap: 1em;
   justify-content: center;
   padding-bottom: 9.3em;
+}
+@media (min-width: 993px) and (max-width: 1199px) {
+  .pricing__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 242px 1fr;
+  }
 }
 .pricing__content :nth-child(1) :nth-child(3) {
   font-size: 1rem;
@@ -527,8 +557,7 @@ a {
   max-width: 211px;
 }
 .pricing__content :nth-child(3) {
-  width: 315px;
-  margin-top: -55px;
+  margin-top: -45px;
 }
 .pricing__content :nth-child(3) :nth-child(1) {
   background: rgba(67, 48, 70, 0.84);

@@ -6,21 +6,21 @@
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	// padding-inline: 10px;
+	padding-inline: 10px;
 	// box-sizing: border-box;
 }
 
-// html {
-// 	font-size: 16px;
+html {
+	font-size: 16px;
 
-// 	@media(min-width: 993px) and (max-width:1136px) {
-// 		// font-size: 14.3px;
-// 	}
+	@media(min-width: 993px) and (max-width:1199px) {
+		font-size: 15px;
+	}
 
-// 	@media (max-width: 320px) {
-// 		// font-size: 14px;
-// 	}
-// }
+	// @media (max-width: 320px) {
+	// 	font-size: 14px;
+	// }
+}
 
 
 // @media((min-width: 320px) and (max-width:480px)){

@@ -30,12 +30,16 @@
         margin-top: 5.1em;
 
 
+        @media(min-width: 993px) and (max-width:1199px) {
+            column-gap: .8em;
+        }
+
     }
 
     &-item {
         text-align: center;
 
-        img {
+        &-img {
             padding-bottom: 1.8em;
         }
 
