@@ -89,6 +89,7 @@
 		font-size: rem(16);
 		line-height: rem(17);
 		text-transform: capitalize;
+		text-align: center;
 		padding-inline: 1.25em;
 		padding-block: 0.6em;
 		background-color: $title-color-text;
@@ -163,6 +164,73 @@
 	}
 }
 
+// @media(min-width: 993px) and (max-width:1200px) {}
+
+//* Burger-menu section
+.burger {
+	@include flex;
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	height: 37px;
+	width: 44px;
+
+
+	&__line {
+		position: relative;
+		width: 26px;
+		height: 3px;
+		background: $bg-white-color;
+		border-radius: 4px;
+		transition: all .5s ease-in-out;
+
+		&:before {
+			position: absolute;
+			left: 11px;
+			background: $bg-white-color;
+			content: "";
+			width: 15px;
+			height: 3px;
+			transition: all .5s ease-in-out;
+		}
+
+		&:after {
+			position: absolute;
+			background: $bg-white-color;
+			content: "";
+			width: 26px;
+			height: 3px;
+			transition: all .5s ease-in-out;
+		}
+
+		&:before {
+			top: -4px;
+		}
+
+		&:after {
+			top: 4px;
+		}
+	}
+}
+
+.hero__menu.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.burger__line.close {
+	background: transparent;
+
+	&:before {
+		transform: rotate(45deg) translate(4px, 4px);
+	}
+
+	&:after {
+		transform: rotate(-45deg) translate(2px, -2px);
+	}
+}
+
+
 
 
 
@@ -175,5 +243,3 @@
 // @media((min-width: 320px) and (max-width:480px)) {}
 
 // @media((min-width: 481px) and (max-width:992px)) {}
-
-// @media((min-width: 993px) and (max-width:1200px)) {}
