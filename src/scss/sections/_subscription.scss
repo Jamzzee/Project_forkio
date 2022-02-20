@@ -17,7 +17,7 @@
 
 .pricing__content {
 	display: grid;
-	grid-template-columns: 257px 257px 299px 257px;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 1em;
 	justify-content: center;
 	padding-bottom: 9.3em;

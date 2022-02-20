@@ -1,5 +1,4 @@
 .header {
-	position: relative;
 	// max-height: 800px;
 	background-image: url("../../../dist/images/header-background.png");
 	background-size: cover;
@@ -12,27 +11,49 @@
 .hero {
 	@include flex;
 	justify-content: space-between;
-	padding-block: 42px;
-	padding-inline: 80px;
 
-	@media(min-width: 993px) and (max-width:1150px) {
-		font-size: 80%;
+	// @media(min-width: 993px) and (max-width:1150px) {
+	// 	font-size: 80%;
+	// }
+
+	// @media(min-width: 993px) and (max-width:1100px) {
+	// 	font-size: 70%;
+	// }
+
+	// @media(min-width: 993px) and (max-width:1078px) {
+	// 	font-size: 52%;
+	// }
+
+	@include for-size(tablet) {
+		height: 118px;
+		width: 100%;
+		background: rgba(39, 38, 42, 1);
+		display: grid;
+		align-content: center;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"hero__logo hero__buy"
+			"hero__menu-item hero__menu-item";
+
+		.hero__logo {
+			grid-area: hero__logo;
+			align-self: flex-start;
+		}
+
+		.hero__buy {
+			grid-area: hero__buy;
+		}
+
+		.hero__menu-item {
+			grid-area: hero__menu-item;
+		}
 	}
-
-	@media(min-width: 993px) and (max-width:1100px) {
-		font-size: 70%;
-	}
-
-	@media(min-width: 993px) and (max-width:1078px) {
-		font-size: 52%;
-	}
-
-
 }
 
 
 .hero__logo {
-	@include flex;
+	@include flex(flex-start);
+	padding-top: 1.8em;
 	gap: 1em;
 
 	&-title {
@@ -48,6 +69,10 @@
 		color: #fff;
 	}
 
+	@include for-size(tablet) {
+		padding-top: 22px;
+		padding-left: 20px;
+	}
 
 }
 
@@ -57,16 +82,28 @@
 
 .hero__menu {
 	@include flex;
-	padding-left: 9em;
-	padding-right: 48px;
 	text-align: center;
+	padding-left: 9em;
+
+	@include for-size(tablet) {
+		@include flex;
+		// padding-left: 125px;
+		padding-bottom: 1.1em;
+	}
 
 
 	&-list {
 		@include flex;
 		gap: 3em;
+	}
 
+	&-item {
+		padding-top: 2.5em;
+		padding-right: 2.8em;
 
+		@include for-size(table) {
+			padding-top: 0;
+		}
 	}
 
 	&-link {
@@ -78,10 +115,6 @@
 		text-transform: capitalize;
 	}
 
-
-
-	
-
 	:hover {
 		color: $title-color;
 		transition: 0.1s;
@@ -89,23 +122,21 @@
 }
 
 .hero__buy {
-	width: max-content;
+	@include flex(flex-end);
 	text-align: center;
-
+	padding-top: 1.9em;
 
 
 	&-link {
-		display: inline-block;
-
+		width: 145px;
+		height: 37px;
+		// display: inline-block;
 		font-family: $primary-fonts;
 		font-weight: 700;
 		color: $title-color;
 		font-size: rem(16);
 		line-height: rem(17);
 		text-transform: capitalize;
-		text-align: center;
-		padding-inline: 1.25em;
-		padding-block: 0.6em;
 		background-color: $title-color-text;
 		border: 1px solid $title-color-text;
 		border-radius: 2.5em;
@@ -115,6 +146,11 @@
 		background-color: $bg-white-color;
 		color: $title-color-text;
 		transition: 0.1s;
+	}
+
+	@include for-size(tablet) {
+		padding-top: 24px;
+		padding-left: 20px;
 	}
 }
 
@@ -151,24 +187,20 @@
 }
 
 .hero__button {
-	position: absolute;
-	right: 50%;
-	bottom: -2.5em;
-	transform: translate(50%);
-	
+	@include flex;
+	transform: translateY(-50%);
+
 	&-download {
 		display: inline-block;
 		font-family: $primary-fonts;
 		font-weight: 700;
-		// font-size: rem(21);
-		// line-height: rem(22);
 		text-transform: capitalize;
 		color: $title-color;
 		padding-block: 1.4em;
 		padding-inline: 3.8em;
 		border: 2px solid $title-color-text;
 		border-radius: 40px;
-		background: $title-color-text;
+		background-color: $title-color-text;
 	}
 
 	:hover {
@@ -178,161 +210,105 @@
 	}
 }
 
-// @media(min-width: 993px) and (max-width:1200px) {}
 
 //* Burger-menu section
-.burger {
-	@include flex;
-	display: none;
-	flex-direction: column;
-	cursor: pointer;
-	height: 37px;
-	width: 44px;
+// .burger {
+// 	@include flex;
+// 	display: none;
+// 	flex-direction: column;
+// 	cursor: pointer;
+// 	height: 37px;
+// 	width: 44px;
 
+// 	&__line {
+// 		position: relative;
+// 		width: 26px;
+// 		height: 3px;
+// 		background: $bg-white-color;
+// 		border-radius: 4px;
+// 		transition: all .5s ease-in-out;
 
-	&__line {
-		position: relative;
-		width: 26px;
-		height: 3px;
-		background: $bg-white-color;
-		border-radius: 4px;
-		transition: all .5s ease-in-out;
+// 		&:before {
+// 			position: absolute;
+// 			left: 11px;
+// 			background: $bg-white-color;
+// 			content: "";
+// 			width: 15px;
+// 			height: 3px;
+// 			transition: all .5s ease-in-out;
+// 		}
 
-		&:before {
-			position: absolute;
-			left: 11px;
-			background: $bg-white-color;
-			content: "";
-			width: 15px;
-			height: 3px;
-			transition: all .5s ease-in-out;
-		}
+// 		&:after {
+// 			position: absolute;
+// 			background: $bg-white-color;
+// 			content: "";
+// 			width: 26px;
+// 			height: 3px;
+// 			transition: all .5s ease-in-out;
+// 		}
 
-		&:after {
-			position: absolute;
-			background: $bg-white-color;
-			content: "";
-			width: 26px;
-			height: 3px;
-			transition: all .5s ease-in-out;
-		}
+// 		&:before {
+// 			top: -4px;
+// 		}
 
-		&:before {
-			top: -4px;
-		}
+// 		&:after {
+// 			top: 4px;
+// 		}
+// 	}
+// }
 
-		&:after {
-			top: 4px;
-		}
-	}
-}
+// .hero__menu.active {
+// 	opacity: 1;
+// 	pointer-events: all;
+// }
 
-.hero__menu.active {
-	opacity: 1;
-	pointer-events: all;
-}
+// .burger__line.close {
+// 	background: transparent;
 
-.burger__line.close {
-	background: transparent;
+// 	&:before {
+// 		transform: rotate(45deg) translate(4px, 4px);
+// 	}
 
-	&:before {
-		transform: rotate(45deg) translate(4px, 4px);
-	}
+// 	&:after {
+// 		transform: rotate(-45deg) translate(2px, -2px);
+// 	}
+// }
 
-	&:after {
-		transform: rotate(-45deg) translate(2px, -2px);
-	}
-}
+// @include for-size(tablet) {
+// 	.hero {
+// 		display: flex;
+// 		position: relative;
+// 		padding: 0;
+// 		margin: 0;
+// 		min-height: 118px;
+// 		background: rgba(39, 38, 42, 1);
 
+// 		&__logo {
+// 			order: 1;
+// 			margin-left: 20px;
+// 		}
 
-@media(min-width: 481px) and (max-width:992px) {
+// 		&__menu {
+// 			min-width: 481px;
+// 			position: absolute;
+// 			left: 50%;
+// 			transform: translate(-50%);
+// 			display: inline-block;
+// 			bottom: 18px;
+// 			padding: 0;
+// 			order: 2;
 
+// 			&-list {
+// 				margin-top: 40px;
+// 				gap: 32px;
+// 			}
+// 		}
 
-	
-
-	.hero{
-		display:flex;
-		
-		height:118px;
-		
-		position: relative;
-		
-		padding:0;
-		margin:0;
-		min-height:118px;
-		background: rgba(39, 38, 42, 1);
-		
-
-		&__logo{
-			order: 1;
-			margin-left: 20px;
-
-		}
-
-		&__menu{
-			
-			
-
-			min-width:481px;
-			position: absolute;
-			left:50%;
-			transform: translate(-50%);
-			display:inline-block;
-			bottom:18px;
-
-			
-			padding:0;
-
-			order: 2;
-			
-
-			&-list{
-
-				margin-top: 40px;
-				gap: 32px;
-			}
-			
-		}
-
-		&__buy{
-			display: flex;
-			order: 3;
-			
-			margin-top: -15px;
-			margin-right: 20px;
-			
-		}
-
-	}
-
-
-	
-
-	&__button{
-
-		
-		bottom:-2em;
-		
-		
-		&-download{
-			
-			font-size: 70%;
-
-		}
-		
-	}
-
-}
-
-
-
-
-
-
-
-
-
-
-// @media((min-width: 320px) and (max-width:480px)) {}
-
-// @media((min-width: 481px) and (max-width:992px)) {}
+// 		&__buy {
+// 			display: flex;
+// 			order: 3;
+// 			margin-top: -15px;
+// 			margin-right: 20px;
+// 		}
+// 	}
+// }

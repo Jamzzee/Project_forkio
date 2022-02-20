@@ -23,7 +23,7 @@
 
     &-wrap {
         display: grid;
-        grid-template-columns: repeat(3, 315px);
+        grid-template-columns: repeat(3, 1fr);
         align-items: baseline;
         row-gap: 7em;
         column-gap: 6.8em;
