@@ -67,6 +67,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
+  padding-inline: 10px;
 }
 
 .header {
@@ -91,7 +92,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1em;
-  margin-right: 19.5em;
+  padding-right: 19.5em;
 }
 .hero__logo-title {
   font-family: "Lato", sans-serif;
@@ -135,12 +136,14 @@ a {
 }
 
 .hero__buy-link {
+  display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #FFFFFF;
   font-size: 1rem;
   line-height: 1.0625rem;
   text-transform: capitalize;
+  text-align: center;
   padding-inline: 1.25em;
   padding-block: 0.6em;
   background-color: #8D81AC;

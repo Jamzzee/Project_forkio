@@ -16,7 +16,7 @@
 .hero__logo {
 	@include flex;
 	gap: 1em;
-	margin-right: 19.5em;
+	padding-right: 19.5em;
 
 	&-title {
 		font-family: $secondary-fonts;
@@ -66,12 +66,14 @@
 
 .hero__buy {
 	&-link {
+		display: inline-block;
 		font-family: $primary-fonts;
 		font-weight: 700;
 		color: $title-color;
 		font-size: rem(16);
 		line-height: rem(17);
 		text-transform: capitalize;
+		text-align: center;
 		padding-inline: 1.25em;
 		padding-block: 0.6em;
 		background-color: $title-color-text;
@@ -145,6 +147,8 @@
 		transition: 0.1s;
 	}
 }
+
+// @media(min-width: 993px) and (max-width:1200px) {}
 
 //* Burger-menu section
 .burger {
@@ -223,5 +227,3 @@
 // @media((min-width: 320px) and (max-width:480px)) {}
 
 // @media((min-width: 481px) and (max-width:992px)) {}
-
-// @media((min-width: 993px) and (max-width:1200px)) {}
