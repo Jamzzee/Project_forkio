@@ -66,14 +66,11 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box;
-  padding-inline: 10px;
 }
 
 .header {
   position: relative;
-  max-height: 800px;
-  background-image: url("../../../dist/images/back-header.png");
+  background-image: url("../../../dist/images/header-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -83,8 +80,24 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  padding-block: 1.9em;
+  justify-content: space-between;
+  padding-block: 42px;
+  padding-inline: 80px;
+}
+@media (min-width: 993px) and (max-width: 1150px) {
+  .hero {
+    font-size: 80%;
+  }
+}
+@media (min-width: 993px) and (max-width: 1100px) {
+  .hero {
+    font-size: 70%;
+  }
+}
+@media (min-width: 993px) and (max-width: 1078px) {
+  .hero {
+    font-size: 52%;
+  }
 }
 
 .hero__logo {
@@ -92,7 +105,6 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1em;
-  padding-right: 19.5em;
 }
 .hero__logo-title {
   font-family: "Lato", sans-serif;
@@ -105,16 +117,18 @@ a {
 .hero__logo-title:hover {
   color: #fff;
 }
-.hero__logo-img {
-  display: inline-block;
-}
 
 .hero__logo:hover {
   filter: brightness(0) invert(1);
 }
 
 .hero__menu {
-  margin-right: 4.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 9em;
+  padding-right: 48px;
+  text-align: center;
 }
 .hero__menu-list {
   display: flex;
@@ -135,6 +149,10 @@ a {
   transition: 0.1s;
 }
 
+.hero__buy {
+  width: max-content;
+  text-align: center;
+}
 .hero__buy-link {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -157,7 +175,7 @@ a {
 }
 
 .hero__info {
-  margin-top: 5.1em;
+  margin-top: 4.3em;
   text-align: center;
 }
 .hero__info-title {

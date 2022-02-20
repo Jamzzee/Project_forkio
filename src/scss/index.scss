@@ -2,12 +2,25 @@
 @import "./helpers/variables";
 @import "./helpers/mixins";
 
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	box-sizing: border-box;
-	padding-inline: 10px;
+	// padding-inline: 10px;
+	// box-sizing: border-box;
 }
+
+// html {
+// 	font-size: 16px;
+
+// 	@media(min-width: 993px) and (max-width:1136px) {
+// 		// font-size: 14.3px;
+// 	}
+
+// 	@media (max-width: 320px) {
+// 		// font-size: 14px;
+// 	}
+// }
 
 
 // @media((min-width: 320px) and (max-width:480px)){
@@ -20,12 +33,7 @@
 
 // }
 
-// @media((min-width: 993px) and (max-width:1200px)) {
-// 	.container {
-// 		margin: 0 auto;
-// 		box-sizing: border-box;
-// 		padding-inline: 10px;
-// 	}
+// @media(min-width: 993px) and (max-width:1200px) {
 // }
 
 @import "./sections/main";
