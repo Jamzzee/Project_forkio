@@ -66,13 +66,21 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box;
+  padding-inline: 10px;
+}
+
+html {
+  font-size: 16px;
+}
+@media (min-width: 993px) and (max-width: 1199px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 .header {
   position: relative;
-  max-height: 800px;
-  background-image: url("../../../dist/images/back-header.png");
+  background-image: url("../../../dist/images/header-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -82,8 +90,24 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  padding-block: 1.9em;
+  justify-content: space-between;
+  padding-block: 42px;
+  padding-inline: 80px;
+}
+@media (min-width: 993px) and (max-width: 1150px) {
+  .hero {
+    font-size: 80%;
+  }
+}
+@media (min-width: 993px) and (max-width: 1100px) {
+  .hero {
+    font-size: 70%;
+  }
+}
+@media (min-width: 993px) and (max-width: 1078px) {
+  .hero {
+    font-size: 52%;
+  }
 }
 
 .hero__logo {
@@ -91,7 +115,6 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1em;
-  margin-right: 19.5em;
 }
 .hero__logo-title {
   font-family: "Lato", sans-serif;
@@ -104,16 +127,18 @@ a {
 .hero__logo-title:hover {
   color: #fff;
 }
-.hero__logo-img {
-  display: inline-block;
-}
 
 .hero__logo:hover {
   filter: brightness(0) invert(1);
 }
 
 .hero__menu {
-  margin-right: 4.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 9em;
+  padding-right: 48px;
+  text-align: center;
 }
 .hero__menu-list {
   display: flex;
@@ -134,13 +159,19 @@ a {
   transition: 0.1s;
 }
 
+.hero__buy {
+  width: max-content;
+  text-align: center;
+}
 .hero__buy-link {
+  display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #FFFFFF;
   font-size: 1rem;
   line-height: 1.0625rem;
   text-transform: capitalize;
+  text-align: center;
   padding-inline: 1.25em;
   padding-block: 0.6em;
   background-color: #8D81AC;
@@ -154,7 +185,7 @@ a {
 }
 
 .hero__info {
-  margin-top: 5.1em;
+  margin-top: 4.3em;
   text-align: center;
 }
 .hero__info-title {
@@ -264,6 +295,41 @@ a {
   transform: rotate(-45deg) translate(2px, -2px);
 }
 
+@media (min-width: 481px) and (max-width: 992px) {
+  .hero {
+    display: flex;
+    height: 118px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    min-height: 118px;
+    background: #27262a;
+  }
+  .hero__logo {
+    order: 1;
+    margin-left: 20px;
+  }
+  .hero__menu {
+    min-width: 481px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: inline-block;
+    bottom: 18px;
+    padding: 0;
+    order: 2;
+  }
+  .hero__menu-list {
+    margin-top: 40px;
+    gap: 32px;
+  }
+  .hero__buy {
+    display: flex;
+    order: 3;
+    margin-top: -15px;
+    margin-right: 20px;
+  }
+}
 .editor__info {
   display: flex;
   justify-content: center;
@@ -403,13 +469,21 @@ a {
 .whatYouGet__code-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.9375rem;
   line-height: 3.125rem;
   color: #8D81AC;
-  margin-bottom: 1.1em;
+  padding-bottom: 0.5em;
+}
+@media (min-width: 993px) and (max-width: 1115px) {
+  .whatYouGet__code-title {
+    padding-bottom: 1.1em;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
 }
 .whatYouGet__code-image img {
   width: 100%;
+  min-height: 519px;
 }
 
 .people-background {
@@ -441,10 +515,15 @@ a {
   column-gap: 6.8em;
   margin-top: 5.1em;
 }
+@media (min-width: 993px) and (max-width: 1199px) {
+  .people__content-wrap {
+    column-gap: 0.8em;
+  }
+}
 .people__content-item {
   text-align: center;
 }
-.people__content-item img {
+.people__content-item-img {
   padding-bottom: 1.8em;
 }
 .people__content-item-text {
@@ -476,6 +555,7 @@ a {
 
 .pricing-background {
   background: #4a3b4e;
+  margin-top: -15px;
 }
 
 .pricing-title {
@@ -492,10 +572,16 @@ a {
 
 .pricing__content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 257px 257px 299px 257px;
   gap: 1em;
   justify-content: center;
   padding-bottom: 9.3em;
+}
+@media (min-width: 993px) and (max-width: 1199px) {
+  .pricing__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 242px 1fr;
+  }
 }
 .pricing__content :nth-child(1) :nth-child(3) {
   font-size: 1rem;
@@ -506,8 +592,7 @@ a {
   max-width: 211px;
 }
 .pricing__content :nth-child(3) {
-  width: 315px;
-  margin-top: -55px;
+  margin-top: -45px;
 }
 .pricing__content :nth-child(3) :nth-child(1) {
   background: rgba(67, 48, 70, 0.84);

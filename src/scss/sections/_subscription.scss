@@ -1,5 +1,6 @@
 .pricing-background {
 	background: rgba(74, 59, 78, 1);
+	margin-top: -15px;
 }
 
 .pricing-title {
@@ -16,10 +17,15 @@
 
 .pricing__content {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: 257px 257px 299px 257px;
 	gap: 1em;
 	justify-content: center;
 	padding-bottom: 9.3em;
+
+	@media(min-width: 993px) and (max-width:1199px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 242px 1fr;
+	}
 
 	:nth-child(1) {
 		:nth-child(3) {
@@ -34,8 +40,8 @@
 
 
 	:nth-child(3) {
-		width: 315px;
-		margin-top: -55px;
+		// width: 260px;
+		margin-top: -45px;
 
 		:nth-child(1) {
 			background: rgba(67, 48, 70, 0.84);
