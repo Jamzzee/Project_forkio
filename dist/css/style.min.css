@@ -582,6 +582,7 @@ html {
 }
 
 .pricing-background {
+  margin-top: -15px;
   background: #4a3b4e;
   margin-top: -15px;
 }
@@ -623,39 +624,41 @@ html {
     min-width: 244px;
   }
 }
-.pricing__content :nth-child(1) :nth-child(3) {
-  font-size: 1rem;
-  line-height: 1.125rem;
-  margin-bottom: 5.4em;
-  text-transform: capitalize;
-  text-align: center;
-  max-width: 211px;
+.pricing__content :nth-child(1) :nth-child(2) {
+  margin-bottom: 5.8em;
 }
-.pricing__content :nth-child(3) {
-  margin-top: -45px;
+@media (min-width: 481px) and (max-width: 992px) {
+  .pricing__content :nth-child(1) :nth-child(2) {
+    margin-bottom: 4.4em;
+  }
+}
+.pricing__content :nth-child(2) :nth-child(1) {
+  padding: 18px 21px;
 }
 @media (min-width: 481px) and (max-width: 992px) {
   .pricing__content :nth-child(3) {
     min-width: 299px;
   }
 }
-.pricing__content :nth-child(3) :nth-child(1) {
-  background: rgba(67, 48, 70, 0.84);
+.pricing__content :nth-child(3) .pricing__content-wrap-title-block {
+  background: rgba(60, 41, 63, 0.84);
+  padding: 50px 105px;
+  margin-top: -63px;
+}
+.pricing__content :nth-child(3) .pricing__content-wrap-info-cost {
+  font-size: 5.125rem;
+  line-height: 5.625rem;
 }
 .pricing__content :nth-child(3) :nth-child(2) {
   background: rgba(74, 55, 77, 0.84);
 }
-.pricing__content :nth-child(3) :nth-child(2) :nth-child(1) {
-  font-size: 5.125rem;
-  line-height: 5.625rem;
-  background: none;
+.pricing__content :nth-child(3) .pricing__content-wrap-info-purchase {
+  margin-top: 50px;
 }
-.pricing__content :nth-child(3) :nth-child(2) :nth-child(3) {
-  margin-top: 40px;
-  margin-bottom: 120px;
-}
-.pricing__content-wrap :nth-child(2) :nth-child(3) {
-  margin-top: 20px;
+.pricing__content-wrap-title-block {
+  text-align: center;
+  padding: 36px 63px 36px 63px;
+  background-color: rgba(255, 255, 255, 0.06);
 }
 .pricing__content-wrap-title {
   font-family: "Montserrat", sans-serif;
@@ -664,9 +667,6 @@ html {
   display: block;
   color: #ffffff;
   text-transform: uppercase;
-  text-align: center;
-  padding-block: 2.2em;
-  background: rgba(255, 255, 255, 0.06);
 }
 .pricing__content-wrap-info {
   display: flex;
