@@ -2,26 +2,28 @@
 @import "./helpers/variables";
 @import "./helpers/mixins";
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
+* {
 	box-sizing: border-box;
 }
 
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-inline: 10px;
+}
 
-// @media((min-width: 320px) and (max-width:480px)){
+html {
+	font-size: 16px;
 
+	@media(min-width: 993px) and (max-width:1199px) {
+		font-size: 15px;
+	}
 
-// }
+	// @media (max-width: 320px) {
+	// 	font-size: 14px;
+	// }
+}
 
-// @media((min-width: 481px) and (max-width:992px)){
-
-
-// }
-
-// @media((min-width: 993px) and (max-width:1200px)){
-
-
-// }
 
 @import "./sections/main";
+
