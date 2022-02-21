@@ -9,6 +9,10 @@
 }
 
 .hero {
+
+	@include for-size(phone) {
+		align-items: center;
+	}
 	display: grid;
 	justify-items: center;
 	grid-template-columns: repeat(3, 1fr);
@@ -40,6 +44,8 @@
 			grid-area: hero__menu-list;
 		}
 	}
+
+
 }
 
 
@@ -67,6 +73,12 @@
 		padding-left: 1em;
 	}
 
+	@include for-size(phone){
+		h2{
+			display:none;
+		}
+	}
+
 }
 
 .hero__logo:hover {
@@ -84,6 +96,9 @@
 		margin-left: 0;
 	}
 
+	@include for-size(phone){
+		display: none;
+	}
 
 	&-list {
 		@include flex;
@@ -98,6 +113,8 @@
 			padding-top: 1.75em;
 		}
 	}
+
+
 
 	&-link {
 		font-family: $primary-fonts;
@@ -116,6 +133,8 @@
 		color: $title-color;
 		transition: 0.1s;
 	}
+
+
 }
 
 .hero__buy {
@@ -222,65 +241,71 @@
 }
 
 
-//* Burger-menu section
-// .burger {
-// 	@include flex;
-// 	display: none;
-// 	flex-direction: column;
-// 	cursor: pointer;
-// 	height: 37px;
-// 	width: 44px;
 
-// 	&__line {
-// 		position: relative;
-// 		width: 26px;
-// 		height: 3px;
-// 		background: $bg-white-color;
-// 		border-radius: 4px;
-// 		transition: all .5s ease-in-out;
+.burger {
 
-// 		&:before {
-// 			position: absolute;
-// 			left: 11px;
-// 			background: $bg-white-color;
-// 			content: "";
-// 			width: 15px;
-// 			height: 3px;
-// 			transition: all .5s ease-in-out;
-// 		}
+	@include for-size(phone) {
+		display: inline-block;
+		align-self: flex-end;
+		
+	}
+	@include flex;
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	height: 37px;
+	width: 44px;
 
-// 		&:after {
-// 			position: absolute;
-// 			background: $bg-white-color;
-// 			content: "";
-// 			width: 26px;
-// 			height: 3px;
-// 			transition: all .5s ease-in-out;
-// 		}
+	&__line {
+		position: relative;
+		width: 26px;
+		height: 3px;
+		background: $bg-white-color;
+		border-radius: 4px;
+		transition: all .5s ease-in-out;
 
-// 		&:before {
-// 			top: -4px;
-// 		}
+		&:before {
+			position: absolute;
+			left: 11px;
+			background: $bg-white-color;
+			content: "";
+			width: 15px;
+			height: 3px;
+			transition: all .5s ease-in-out;
+		}
 
-// 		&:after {
-// 			top: 4px;
-// 		}
-// 	}
-// }
+		&:after {
+			position: absolute;
+			background: $bg-white-color;
+			content: "";
+			width: 26px;
+			height: 3px;
+			transition: all .5s ease-in-out;
+		}
 
-// .hero__menu.active {
-// 	opacity: 1;
-// 	pointer-events: all;
-// }
+		&:before {
+			top: -4px;
+		}
 
-// .burger__line.close {
-// 	background: transparent;
+		&:after {
+			top: 4px;
+		}
+	}
+}
 
-// 	&:before {
-// 		transform: rotate(45deg) translate(4px, 4px);
-// 	}
+.hero__menu.active {
+	opacity: 1;
+	pointer-events: all;
+}
 
-// 	&:after {
-// 		transform: rotate(-45deg) translate(2px, -2px);
-// 	}
-// }
+.burger__line.close {
+	background: transparent;
+
+	&:before {
+		transform: rotate(45deg) translate(4px, 4px);
+	}
+
+	&:after {
+		transform: rotate(-45deg) translate(2px, -2px);
+	}
+}

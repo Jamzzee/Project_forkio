@@ -92,6 +92,11 @@ html {
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero {
+    align-items: center;
+  }
+}
 @media (min-width: 481px) and (max-width: 992px) {
   .hero {
     width: 100%;
@@ -139,6 +144,11 @@ html {
     padding-left: 1em;
   }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero__logo h2 {
+    display: none;
+  }
+}
 
 .hero__logo:hover {
   filter: brightness(0) invert(1);
@@ -156,6 +166,11 @@ html {
     padding-left: 125px;
     padding-bottom: 1.1em;
     margin-left: 0;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero__menu {
+    display: none;
   }
 }
 .hero__menu-list {
@@ -290,6 +305,69 @@ html {
   background-color: #FFFFFF;
   color: #8D81AC;
   transition: 0.1s;
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  height: 37px;
+  width: 44px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .burger {
+    display: inline-block;
+    align-self: flex-end;
+  }
+}
+.burger__line {
+  position: relative;
+  width: 26px;
+  height: 3px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}
+.burger__line:before {
+  position: absolute;
+  left: 11px;
+  background: #FFFFFF;
+  content: "";
+  width: 15px;
+  height: 3px;
+  transition: all 0.5s ease-in-out;
+}
+.burger__line:after {
+  position: absolute;
+  background: #FFFFFF;
+  content: "";
+  width: 26px;
+  height: 3px;
+  transition: all 0.5s ease-in-out;
+}
+.burger__line:before {
+  top: -4px;
+}
+.burger__line:after {
+  top: 4px;
+}
+
+.hero__menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.burger__line.close {
+  background: transparent;
+}
+.burger__line.close:before {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.burger__line.close:after {
+  transform: rotate(-45deg) translate(2px, -2px);
 }
 
 .editor__info {
@@ -584,7 +662,6 @@ html {
 .pricing-background {
   margin-top: -15px;
   background: #4a3b4e;
-  margin-top: -15px;
 }
 
 .pricing-title {
@@ -616,7 +693,7 @@ html {
 @media (min-width: 481px) and (max-width: 992px) {
   .pricing__content {
     grid-template-columns: repeat(2, 1fr);
-    align-items: end;
+    align-items: flex-start;
     gap: 1.5em;
     row-gap: 4.4em;
     padding-right: 6.7em;
