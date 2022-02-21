@@ -76,6 +76,11 @@
 	}
 }
 
+@include for-size(tablet) {
+	.editor__info{
+		text-align: center;
+	}
+}
 
 // @media((min-width: 320px) and (max-width:480px)){
 

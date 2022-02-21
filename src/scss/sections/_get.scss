@@ -89,6 +89,36 @@
 
 }
 
+@include for-size(tablet) {
+	.whatYouGet{
+		display: flex;
+		flex-flow: column wrap;
+		
+		&__info{
+			order: 2;
+
+			:nth-child(1){
+				:nth-child(1){
+
+					:nth-child(1){
+						margin-left:-24px;
+					}
+
+					
+				}
+			}
+
+		}
+		&__code-title{
+			order: 1;
+		}
+
+		&__code-image{
+			order: 3;
+		}
+
+	}
+}
 
 // @media((min-width: 320px) and (max-width:480px)){
 

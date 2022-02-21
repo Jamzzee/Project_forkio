@@ -102,8 +102,8 @@ html {
     background: #27262a;
     display: grid;
     align-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "hero__logo hero__buy" "hero__menu-item hero__menu-item";
+    grid-template-columns: 1fr 517px 1fr;
+    grid-template-areas: "hero__logo" "hero__menu-list" "hero__buy-link";
   }
   .hero .hero__logo {
     grid-area: hero__logo;
@@ -151,7 +151,6 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-left: 9em;
 }
 @media (min-width: 481px) and (max-width: 992px) {
   .hero__menu {
@@ -165,11 +164,16 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3em;
+  gap: 30px;
 }
 .hero__menu-item {
   padding-top: 2.5em;
   padding-right: 2.8em;
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .hero__menu-item {
+    padding-top: 0;
+  }
 }
 .hero__menu-link {
   font-family: "Montserrat", sans-serif;
@@ -341,6 +345,11 @@ html {
   padding-block: 0.5em;
 }
 
+@media (min-width: 481px) and (max-width: 992px) {
+  .editor__info {
+    text-align: center;
+  }
+}
 .whatYouGet-bgcolor {
   background-color: #F4F4F4;
 }
@@ -424,6 +433,24 @@ html {
   min-height: 519px;
 }
 
+@media (min-width: 481px) and (max-width: 992px) {
+  .whatYouGet {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .whatYouGet__info {
+    order: 2;
+  }
+  .whatYouGet__info :nth-child(1) :nth-child(1) :nth-child(1) {
+    margin-left: -24px;
+  }
+  .whatYouGet__code-title {
+    order: 1;
+  }
+  .whatYouGet__code-image {
+    order: 3;
+  }
+}
 .people-background {
   background-image: url(../../../dist/images/people-back.png);
   background-repeat: no-repeat;

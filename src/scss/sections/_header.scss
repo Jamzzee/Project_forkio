@@ -30,10 +30,11 @@
 		background: rgba(39, 38, 42, 1);
 		display: grid;
 		align-content: center;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr 517px 1fr;
 		grid-template-areas:
-			"hero__logo hero__buy"
-			"hero__menu-item hero__menu-item";
+			"hero__logo"
+			"hero__menu-list"
+			"hero__buy-link";
 
 		.hero__logo {
 			grid-area: hero__logo;
@@ -83,7 +84,7 @@
 .hero__menu {
 	@include flex;
 	text-align: center;
-	padding-left: 9em;
+	// padding-left: 9em;
 
 	@include for-size(tablet) {
 		@include flex;
@@ -94,14 +95,14 @@
 
 	&-list {
 		@include flex;
-		gap: 3em;
+		gap: 30px;
 	}
 
 	&-item {
 		padding-top: 2.5em;
 		padding-right: 2.8em;
 
-		@include for-size(table) {
+		@include for-size(tablet) {
 			padding-top: 0;
 		}
 	}
@@ -274,41 +275,45 @@
 // 	}
 // }
 
-// @include for-size(tablet) {
-// 	.hero {
-// 		display: flex;
-// 		position: relative;
-// 		padding: 0;
-// 		margin: 0;
-// 		min-height: 118px;
-// 		background: rgba(39, 38, 42, 1);
+@include for-size(tablet) {
 
-// 		&__logo {
-// 			order: 1;
-// 			margin-left: 20px;
-// 		}
 
-// 		&__menu {
-// 			min-width: 481px;
-// 			position: absolute;
-// 			left: 50%;
-// 			transform: translate(-50%);
-// 			display: inline-block;
-// 			bottom: 18px;
-// 			padding: 0;
-// 			order: 2;
 
-// 			&-list {
-// 				margin-top: 40px;
-// 				gap: 32px;
-// 			}
-// 		}
+	// .hero {
+	// 	display: flex;
+	// 	position: relative;
+	// 	padding: 0;
+	// 	margin: 0;
+	// 	// min-height: 118px;
+	// 	background: rgba(39, 38, 42, 1);
 
-// 		&__buy {
-// 			display: flex;
-// 			order: 3;
-// 			margin-top: -15px;
-// 			margin-right: 20px;
-// 		}
-// 	}
-// }
+	// 	&__logo {
+	// 		order: 1;
+	// 		margin-left: 20px;
+	// 	}
+
+	// 	&__menu {
+	// 		// min-width: 481px;
+	// 		position: absolute;
+	// 		left: 50%;
+	// 		transform: translate(-50%);
+	// 		// display: inline-block;
+	// 		bottom: 18px;
+	// 		padding: 0;
+	// 		order: 2;
+			
+
+	// 		&-list {
+	// 			// margin-top: 40px;
+	// 			gap: 0;
+	// 		}
+	// 	}
+
+	// 	&__buy {
+	// 		display: flex;
+	// 		order: 3;
+	// 		margin-top: -50px;
+	// 		margin-right: 20px;
+	// 	}
+	// }
+}
