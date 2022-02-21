@@ -12,6 +12,10 @@
     padding-top: 6.7em;
     padding-bottom: 1.8em;
 
+    @include for-size(tablet) {
+        text-align: center;
+    }
+
     &-title {
         font-family: $primary-fonts;
         font-weight: 700;
@@ -19,23 +23,36 @@
         line-height: rem(50);
         color: $title-color;
 
+        @include for-size(tablet) {
+            text-align: center;
+            font-size: rem(42);
+            line-height: rem(44);
+        }
     }
 
     &-wrap {
         display: grid;
-        grid-template-columns: repeat(3, 315px);
+        grid-template-columns: repeat(3, 1fr);
         align-items: baseline;
         row-gap: 7em;
         column-gap: 6.8em;
         margin-top: 5.1em;
 
+        @media(min-width: 993px) and (max-width:1199px) {
+            column-gap: .8em;
+        }
 
+        @include for-size(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 6em;
+            row-gap: 5.3em;
+        }
     }
 
     &-item {
         text-align: center;
 
-        img {
+        &-img {
             padding-bottom: 1.8em;
         }
 
@@ -50,7 +67,7 @@
     }
 
     &-footer {
-        display: inline-block;
+        position: relative;
         font-family: $secondary-fonts;
         font-weight: 400;
         font-size: rem(14);
@@ -60,28 +77,21 @@
         margin-top: 7.2em;
         margin-bottom: 0.9em;
         text-align: center;
+    }
 
-        &-line {
-            background-color: #645766;
-            height: 2px;
-            width: 780px;
-            border: none;
+    &-footer::after {
+        position: absolute;
+        bottom: -1.1em;
+        left: 50%;
+        transform: translate(-50%);
+        content: "";
+        min-width: 780px;
+        height: 2px;
+        border: none;
+        background-color: #645766;
+
+        @include for-size(tablet) {
+            min-width: 480px;
         }
     }
 }
-
-
-// @media((min-width: 320px) and (max-width:480px)){
-
-
-// }
-
-// @media((min-width: 481px) and (max-width:992px)){
-
-
-// }
-
-// @media((min-width: 993px) and (max-width:1200px)){
-
-
-// }
