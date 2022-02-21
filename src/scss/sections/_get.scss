@@ -3,17 +3,64 @@
 }
 
 .whatYouGet {
-	@include flex;
-	padding-top: 6.1em;
-	padding-left: 5.6em;
-	padding-bottom: 2.2em;
+	display: grid;
+	justify-items: start;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas:
+		"whatYouGet__info whatYouGet__title"
+		"whatYouGet__info whatYouGet__code";
+
+	.whatYouGet__info {
+		grid-area: whatYouGet__info;
+	}
+
+	.whatYouGet__title {
+		grid-area: whatYouGet__title;
+	}
+
+	.whatYouGet__code {
+		grid-area: whatYouGet__code;
+	}
+
+	@include for-size(tablet) {
+		justify-items: center;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"whatYouGet__title"
+			"whatYouGet__info"
+			"whatYouGet__code";
+
+		.whatYouGet__info {
+			grid-area: whatYouGet__info;
+			justify-self: start;
+		}
+
+		.whatYouGet__title {
+			grid-area: whatYouGet__title;
+		}
+
+		.whatYouGet__code {
+			grid-area: whatYouGet__code;
+			justify-self: end;
+		}
+
+	}
 }
 
 .whatYouGet__info {
 	@include flex;
 	flex-direction: column;
 	gap: 2em;
-	margin-right: 3.1em;
+	padding-top: 6.1em;
+	padding-left: 5.6em;
+	padding-bottom: 4.4em;
+
+	@include for-size(tablet) {
+		padding-top: 3.2em;
+		padding-left: 1.8em;
+		padding-bottom: 4.6em;
+	}
 
 	&-wrap {
 		@include flex;
@@ -53,84 +100,28 @@
 	}
 }
 
-.whatYouGet__code {
-	@include flex;
-	flex-direction: column;
-	align-items: flex-start;
+.whatYouGet__title {
+	padding-top: 5.8em;
 
-	&-title {
+	&-info {
 		font-family: $primary-fonts;
 		font-weight: 700;
 		font-size: rem(47);
 		line-height: rem(50);
 		color: $title-color-text;
-		padding-bottom: .5em;
 
 		@media(min-width: 993px) and (max-width:1115px) {
 			padding-bottom: 1.1em;
 			font-size: rem(40);
 			line-height: rem(40)
 		}
-
-		// @media(min-width: 993px) and (max-width:1100px) {
-		// 	font-size: 70%;
-		// }
-
-		// @media(min-width: 993px) and (max-width:1078px) {
-		// 	font-size: 52%;
-		// }
 	}
+}
 
-	&-image img {
+.whatYouGet__code {
+	img {
 		width: 100%;
 		min-height: 519px;
 	}
 
-
 }
-
-@include for-size(tablet) {
-	.whatYouGet{
-		display: flex;
-		flex-flow: column wrap;
-		
-		&__info{
-			order: 2;
-
-			:nth-child(1){
-				:nth-child(1){
-
-					:nth-child(1){
-						margin-left:-24px;
-					}
-
-					
-				}
-			}
-
-		}
-		&__code-title{
-			order: 1;
-		}
-
-		&__code-image{
-			order: 3;
-		}
-
-	}
-}
-
-// @media((min-width: 320px) and (max-width:480px)){
-
-
-// }
-
-// @media((min-width: 481px) and (max-width:992px)){
-
-
-// }
-
-// @media((min-width: 993px) and (max-width:1200px)){
-
-
-// }

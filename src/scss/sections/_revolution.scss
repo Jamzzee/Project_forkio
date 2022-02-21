@@ -6,6 +6,11 @@
 	margin-top: 3em;
 	background: $bg-white-color;
 
+	@include for-size(tablet) {
+		text-align: center;
+		margin-bottom: 6.1em;
+	}
+
 	&-trial {
 		display: inline-block;
 		font-family: $primary-fonts;
@@ -76,21 +81,8 @@
 	}
 }
 
-@include for-size(tablet) {
-	.editor__info{
-		text-align: center;
-	}
-}
-
-// @media((min-width: 320px) and (max-width:480px)){
-
-// }
-
-// @media((min-width: 481px) and (max-width:992px)){
-
-
-// }
-
-// @media((min-width: 993px) and (max-width:1200px)){
-
+// @include for-size(tablet) {
+// 	.editor__info{
+// 		text-align: center;
+// 	}
 // }

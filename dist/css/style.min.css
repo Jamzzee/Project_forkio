@@ -102,8 +102,8 @@ html {
     background: #27262a;
     display: grid;
     align-content: center;
-    grid-template-columns: 1fr 517px 1fr;
-    grid-template-areas: "hero__logo" "hero__menu-list" "hero__buy-link";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "hero__logo hero__buy" "hero__menu-item hero__menu-item";
   }
   .hero .hero__logo {
     grid-area: hero__logo;
@@ -282,6 +282,12 @@ html {
   margin-top: 3em;
   background: #FFFFFF;
 }
+@media (min-width: 481px) and (max-width: 992px) {
+  .editor__info {
+    text-align: center;
+    margin-bottom: 6.1em;
+  }
+}
 .editor__info-trial {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -345,22 +351,43 @@ html {
   padding-block: 0.5em;
 }
 
-@media (min-width: 481px) and (max-width: 992px) {
-  .editor__info {
-    text-align: center;
-  }
-}
 .whatYouGet-bgcolor {
   background-color: #F4F4F4;
 }
 
 .whatYouGet {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 6.1em;
-  padding-left: 5.6em;
-  padding-bottom: 2.2em;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "whatYouGet__info whatYouGet__title" "whatYouGet__info whatYouGet__code";
+}
+.whatYouGet .whatYouGet__info {
+  grid-area: whatYouGet__info;
+}
+.whatYouGet .whatYouGet__title {
+  grid-area: whatYouGet__title;
+}
+.whatYouGet .whatYouGet__code {
+  grid-area: whatYouGet__code;
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .whatYouGet {
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "whatYouGet__title" "whatYouGet__info" "whatYouGet__code";
+  }
+  .whatYouGet .whatYouGet__info {
+    grid-area: whatYouGet__info;
+    justify-self: start;
+  }
+  .whatYouGet .whatYouGet__title {
+    grid-area: whatYouGet__title;
+  }
+  .whatYouGet .whatYouGet__code {
+    grid-area: whatYouGet__code;
+    justify-self: end;
+  }
 }
 
 .whatYouGet__info {
@@ -369,7 +396,16 @@ html {
   align-items: center;
   flex-direction: column;
   gap: 2em;
-  margin-right: 3.1em;
+  padding-top: 6.1em;
+  padding-left: 5.6em;
+  padding-bottom: 4.4em;
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .whatYouGet__info {
+    padding-top: 3.2em;
+    padding-left: 1.8em;
+    padding-bottom: 4.6em;
+  }
 }
 .whatYouGet__info-wrap {
   display: flex;
@@ -406,51 +442,29 @@ html {
   color: #848E97;
 }
 
-.whatYouGet__code {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-items: flex-start;
+.whatYouGet__title {
+  padding-top: 5.8em;
 }
-.whatYouGet__code-title {
+.whatYouGet__title-info {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 2.9375rem;
   line-height: 3.125rem;
   color: #8D81AC;
-  padding-bottom: 0.5em;
 }
 @media (min-width: 993px) and (max-width: 1115px) {
-  .whatYouGet__code-title {
+  .whatYouGet__title-info {
     padding-bottom: 1.1em;
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
-.whatYouGet__code-image img {
+
+.whatYouGet__code img {
   width: 100%;
   min-height: 519px;
 }
 
-@media (min-width: 481px) and (max-width: 992px) {
-  .whatYouGet {
-    display: flex;
-    flex-flow: column wrap;
-  }
-  .whatYouGet__info {
-    order: 2;
-  }
-  .whatYouGet__info :nth-child(1) :nth-child(1) :nth-child(1) {
-    margin-left: -24px;
-  }
-  .whatYouGet__code-title {
-    order: 1;
-  }
-  .whatYouGet__code-image {
-    order: 3;
-  }
-}
 .people-background {
   background-image: url(../../../dist/images/people-back.png);
   background-repeat: no-repeat;
@@ -465,12 +479,24 @@ html {
   padding-top: 6.7em;
   padding-bottom: 1.8em;
 }
+@media (min-width: 481px) and (max-width: 992px) {
+  .people__content {
+    text-align: center;
+  }
+}
 .people__content-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.125rem;
   color: #FFFFFF;
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .people__content-title {
+    text-align: center;
+    font-size: 2.625rem;
+    line-height: 2.75rem;
+  }
 }
 .people__content-wrap {
   display: grid;
@@ -483,6 +509,13 @@ html {
 @media (min-width: 993px) and (max-width: 1199px) {
   .people__content-wrap {
     column-gap: 0.8em;
+  }
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .people__content-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6em;
+    row-gap: 5.3em;
   }
 }
 .people__content-item {
@@ -500,7 +533,7 @@ html {
   color: #ffffff;
 }
 .people__content-footer {
-  display: inline-block;
+  position: relative;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
@@ -511,11 +544,21 @@ html {
   margin-bottom: 0.9em;
   text-align: center;
 }
-.people__content-footer-line {
-  background-color: #645766;
+.people__content-footer::after {
+  position: absolute;
+  bottom: -1.1em;
+  left: 50%;
+  transform: translate(-50%);
+  content: "";
+  min-width: 780px;
   height: 2px;
-  width: 780px;
   border: none;
+  background-color: #645766;
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .people__content-footer::after {
+    min-width: 480px;
+  }
 }
 
 .pricing-background {
@@ -534,6 +577,13 @@ html {
   margin-bottom: 2.8em;
   padding-top: 2em;
 }
+@media (min-width: 481px) and (max-width: 992px) {
+  .pricing-title {
+    font-size: 2.625rem;
+    line-height: 2.75rem;
+    margin-bottom: 1em;
+  }
+}
 
 .pricing__content {
   display: grid;
@@ -542,10 +592,15 @@ html {
   justify-content: center;
   padding-bottom: 9.3em;
 }
-@media (min-width: 993px) and (max-width: 1199px) {
+@media (min-width: 481px) and (max-width: 992px) {
   .pricing__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 242px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    gap: 1.5em;
+    row-gap: 4.4em;
+    padding-right: 6.7em;
+    padding-left: 7.5em;
+    min-width: 244px;
   }
 }
 .pricing__content :nth-child(1) :nth-child(3) {
@@ -558,6 +613,11 @@ html {
 }
 .pricing__content :nth-child(3) {
   margin-top: -45px;
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .pricing__content :nth-child(3) {
+    min-width: 299px;
+  }
 }
 .pricing__content :nth-child(3) :nth-child(1) {
   background: rgba(67, 48, 70, 0.84);

@@ -30,11 +30,10 @@
 		background: rgba(39, 38, 42, 1);
 		display: grid;
 		align-content: center;
-		grid-template-columns: 1fr 517px 1fr;
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
-			"hero__logo"
-			"hero__menu-list"
-			"hero__buy-link";
+			"hero__logo hero__buy"
+			"hero__menu-item hero__menu-item";
 
 		.hero__logo {
 			grid-area: hero__logo;
@@ -301,7 +300,7 @@
 	// 		bottom: 18px;
 	// 		padding: 0;
 	// 		order: 2;
-			
+
 
 	// 		&-list {
 	// 			// margin-top: 40px;

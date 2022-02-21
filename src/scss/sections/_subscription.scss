@@ -13,6 +13,12 @@
 	line-height: rem(50);
 	margin-bottom: 2.8em;
 	padding-top: 2em;
+
+	@include for-size(tablet) {
+		font-size: rem(42);
+		line-height: rem(44);
+		margin-bottom: 1em;
+	}
 }
 
 .pricing__content {
@@ -22,9 +28,19 @@
 	justify-content: center;
 	padding-bottom: 9.3em;
 
-	@media(min-width: 993px) and (max-width:1199px) {
-		display: grid;
-		grid-template-columns: 1fr 1fr 242px 1fr;
+	// @media(min-width: 993px) and (max-width:1199px) {
+	// 	display: grid;
+	// 	grid-template-columns: 1fr 1fr 242px 1fr;
+	// }
+
+	@include for-size(tablet) {
+		grid-template-columns: repeat(2, 1fr);
+		align-items: end;
+		gap: 1.5em;
+		row-gap: 4.4em;
+		padding-right: 6.7em;
+		padding-left: 7.5em;
+		min-width: 244px;
 	}
 
 	:nth-child(1) {
@@ -40,8 +56,11 @@
 
 
 	:nth-child(3) {
-		// width: 260px;
 		margin-top: -45px;
+
+		@include for-size(tablet) {
+			min-width: 299px;
+		}
 
 		:nth-child(1) {
 			background: rgba(67, 48, 70, 0.84);
