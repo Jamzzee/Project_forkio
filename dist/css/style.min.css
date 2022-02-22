@@ -612,7 +612,7 @@ html {
 @media (min-width: 481px) and (max-width: 992px) {
   .people__content-wrap {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 6em;
+    column-gap: 5em;
     row-gap: 5.3em;
   }
 }
@@ -695,10 +695,8 @@ html {
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
     gap: 1.5em;
-    row-gap: 4.4em;
-    padding-right: 6.7em;
-    padding-left: 7.5em;
-    min-width: 244px;
+    margin-right: 6.7em;
+    margin-left: 7.5em;
   }
 }
 .pricing__content :nth-child(1) :nth-child(2) {
@@ -741,7 +739,6 @@ html {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
-  display: block;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -775,7 +772,6 @@ html {
   text-transform: uppercase;
 }
 .pricing__content-wrap-info-text::before {
-  display: inline-block;
   position: absolute;
   content: "";
   bottom: -2.5em;

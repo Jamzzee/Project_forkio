@@ -13,6 +13,7 @@
 	@include for-size(phone) {
 		align-items: center;
 	}
+
 	display: grid;
 	justify-items: center;
 	grid-template-columns: repeat(3, 1fr);
@@ -73,9 +74,9 @@
 		padding-left: 1em;
 	}
 
-	@include for-size(phone){
-		h2{
-			display:none;
+	@include for-size(phone) {
+		h2 {
+			display: none;
 		}
 	}
 
@@ -96,7 +97,7 @@
 		margin-left: 0;
 	}
 
-	@include for-size(phone){
+	@include for-size(phone) {
 		display: none;
 	}
 
@@ -247,8 +248,8 @@
 	@include for-size(phone) {
 		display: inline-block;
 		align-self: flex-end;
-		
 	}
+
 	@include flex;
 	display: none;
 	flex-direction: column;
