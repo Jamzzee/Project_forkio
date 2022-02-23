@@ -1,5 +1,13 @@
 .whatYouGet-bgcolor {
 	background-color: $bg-code-color;
+
+	@include for-size(tablet) {
+		background-color: $bg-white-color;
+	}
+
+	@include for-size(phone) {
+		background-color: $bg-white-color;
+	}
 }
 
 .whatYouGet {
@@ -44,6 +52,30 @@
 			grid-area: whatYouGet__code;
 			justify-self: end;
 		}
+	}
+
+	@include for-size(phone) {
+		justify-items: center;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"whatYouGet__title"
+			"whatYouGet__info"
+			"whatYouGet__code";
+
+		.whatYouGet__info {
+			grid-area: whatYouGet__info;
+			justify-self: start;
+		}
+
+		.whatYouGet__title {
+			grid-area: whatYouGet__title;
+		}
+
+		.whatYouGet__code {
+			grid-area: whatYouGet__code;
+			justify-self: end;
+		}
 
 	}
 }
@@ -62,18 +94,32 @@
 		padding-bottom: 4.6em;
 	}
 
+	@include for-size(phone) {
+		padding-top: 2.2em;
+		padding-left: 1.8em;
+		padding-bottom: 4em;
+	}
+
 	&-wrap {
 		@include flex;
 		justify-content: flex-start;
 		max-width: 593px;
 		align-items: center;
 		gap: 1.4em;
+
+		@include for-size(phone) {
+			flex-direction: column;
+		}
 	}
 
 	&-img {
 		@include flex;
 		justify-content: center;
 		width: 100%;
+
+		@include for-size(phone) {
+			padding-bottom: 1.6em;
+		}
 	}
 
 	&-wrap:first-child {
@@ -85,11 +131,19 @@
 		font-family: $primary-fonts;
 		font-weight: 400;
 
+		@include for-size(phone) {
+			padding-bottom: 2.5em;
+		}
+
 		&-title {
 			font-size: rem(16);
 			line-height: rem(21);
 			color: $subtitle-color;
 			margin-bottom: 1em;
+
+			@include for-size(phone) {
+				line-height: rem(16);
+			}
 		}
 
 		&-subtitle {
@@ -103,6 +157,11 @@
 .whatYouGet__title {
 	padding-top: 5.8em;
 
+	@include for-size(phone) {
+		text-align: center;
+		padding-top: 0;
+	}
+
 	&-info {
 		font-family: $primary-fonts;
 		font-weight: 700;
@@ -114,6 +173,11 @@
 			padding-bottom: 1.1em;
 			font-size: rem(40);
 			line-height: rem(40)
+		}
+
+		@include for-size(phone) {
+			font-size: rem(32);
+			line-height: rem(38);
 		}
 	}
 }

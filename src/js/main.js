@@ -1,10 +1,11 @@
-function handleBurger() {
+(function handleBurger() {
 	document.querySelector('.burger').addEventListener('click', () => {
-		document.querySelector('.hero__menu-list').classList.toggle('active')
-		document.querySelector('.burger__line').classList.toggle('close')
+		document.querySelector('.hero__burger').classList.toggle("active")
+		document.querySelector('.hero__burger-line').classList.toggle('close')
 	})
-}
+})()
 
-window.addEventListener("DOMContentLoaded", () => {
-	handleBurger()
-})
+
+// window.addEventListener("DOMContentLoaded", () => {
+// 	handleBurger()
+// })

@@ -11,6 +11,10 @@
 		margin-bottom: 6.1em;
 	}
 
+	@include for-size(phone) {
+		margin-top: -0.7em;
+	}
+
 	&-trial {
 		display: inline-block;
 		font-family: $primary-fonts;
@@ -19,6 +23,11 @@
 		line-height: rem(15);
 		color: $text-color;
 		margin-bottom: 4.1em;
+
+		@include for-size(phone) {
+			line-height: rem(14);
+			margin-bottom: 4.9em;
+		}
 	}
 
 	&-title {
@@ -27,6 +36,11 @@
 		font-size: rem(54);
 		color: #635C73;
 		margin-bottom: 1em;
+
+		@include for-size(phone) {
+			font-size: rem(26);
+			line-height: rem(28);
+		}
 	}
 
 	&-subtitle {
@@ -37,6 +51,14 @@
 		line-height: rem(32);
 		color: $subtitle-color;
 		margin-bottom: 0.8em;
+
+		@include for-size(phone) {
+			font-size: rem(14);
+			line-height: rem(20);
+			padding-left: 1.1em;
+			padding-right: 1.6em;
+
+		}
 	}
 
 	&-actions {
@@ -44,6 +66,12 @@
 		gap: 15px;
 		font-family: $primary-fonts;
 		font-weight: 700;
+
+		@include for-size(phone) {
+			flex-wrap: wrap;
+			padding-bottom: 5.5em;
+			row-gap: 1.2em
+		}
 
 		&-wrap {
 			@include flex;
@@ -54,6 +82,7 @@
 			&-star,
 			&-fork {
 				@include flex;
+				width: 100%;
 				background: linear-gradient(0deg, rgba(221, 222, 222, 0.8046568969384629) 0%, rgba(238, 238, 239, 0.49933476808692223) 46%, rgba(255, 255, 255, 1) 100%);
 				padding-inline: 0.7em;
 				padding-block: 0.5em;
@@ -68,12 +97,31 @@
 				}
 
 				&-text {
+					font-family: $primary-fonts;
+					font-weight: 700;
+					font-size: rem(16);
 					padding-left: .125em;
+
+					@include for-size(phone) {
+						font-size: rem(13);
+						padding-inline: 0.5em;
+						padding-block: 0.2em;
+					}
 				}
 
 				&-info {
+					font-family: $primary-fonts;
+					font-weight: 400;
+					font-size: rem(16);
 					padding-inline: 0.7em;
 					padding-block: 0.5em;
+
+					@include for-size(phone) {
+						font-size: rem(12);
+						font-weight: 700;
+						padding-inline: 0.5em;
+						padding-block: 0.2em;
+					}
 				}
 			}
 

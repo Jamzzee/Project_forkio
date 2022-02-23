@@ -21,6 +21,13 @@
 		margin-bottom: 1em;
 	}
 
+	@include for-size(phone) {
+		font-size: rem(28);
+		line-height: rem(42);
+		padding-top: .01em;
+		margin-bottom: 2em; //Проверить марджин.
+	}
+
 }
 
 .pricing__content {
@@ -38,12 +45,24 @@
 		margin-left: 7.5em;
 	}
 
+	@include for-size(phone) {
+		grid-template-columns: 1fr;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+		padding-bottom: 1.1em;
+	}
+
 	:nth-child(1) {
 		:nth-child(2) {
 			margin-bottom: 5.8em;
 
 			@include for-size(tablet) {
 				margin-bottom: 4.4em;
+			}
+
+			@include for-size(phone) {
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -64,6 +83,10 @@
 			background: rgba(60, 41, 63, 0.84);
 			padding: 50px 105px;
 			margin-top: -63px;
+
+			@include for-size(phone) {
+				margin-top: 0;
+			}
 		}
 
 		.pricing__content-wrap-info-cost {

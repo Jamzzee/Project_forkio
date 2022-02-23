@@ -41,7 +41,6 @@
 		}
 
 		@include for-size(phone) {
-			// align-items: center;
 			height: 118px;
 			background: rgba(39, 38, 42, 1);
 		}
@@ -140,6 +139,7 @@
 
 	.burger__menu {
 		display: none;
+		pointer-events: none;
 
 		@include for-size(phone) {
 			display: block;
@@ -147,7 +147,7 @@
 
 		&-list {
 			position: absolute;
-			// visibility: hidden;
+			visibility: hidden;
 			top: 118px;
 			left: 50%;
 			transform: translate(-50%);
@@ -323,7 +323,7 @@
 
 
 
-.burger {
+.hero__burger {
 	display: none;
 
 	@include for-size(phone) {
@@ -332,14 +332,9 @@
 		cursor: pointer;
 		height: 37px;
 		width: 44px;
-		// position: absolute;
-		// top: 50%;
-		// right: 0;
-		// transform: translateY(-50%)
 	}
 
-
-	&__line {
+	&-line {
 		position: relative;
 		width: 26px;
 		height: 3px;
@@ -347,7 +342,7 @@
 		border-radius: 4px;
 		transition: all .5s ease-in-out;
 
-		&:before {
+		&::before {
 			position: absolute;
 			left: 11px;
 			background: $bg-white-color;
@@ -357,7 +352,7 @@
 			transition: all .5s ease-in-out;
 		}
 
-		&:after {
+		&::after {
 			position: absolute;
 			background: $bg-white-color;
 			content: "";
@@ -366,29 +361,32 @@
 			transition: all .5s ease-in-out;
 		}
 
-		&:before {
+		&::before {
 			top: -4px;
 		}
 
-		&:after {
+		&::after {
 			top: 4px;
 		}
 	}
 }
 
-.hero__menu.active {
-	opacity: 1;
+.burger__menu.active {
 	pointer-events: all;
+
+	&-list {
+		visibility: visible;
+	}
 }
 
-.burger__line.close {
+.hero__burger-line.close {
 	background: transparent;
 
-	&:before {
+	&::before {
 		transform: rotate(45deg) translate(4px, 4px);
 	}
 
-	&:after {
+	&::after {
 		transform: rotate(-45deg) translate(2px, -2px);
 	}
 }
