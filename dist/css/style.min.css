@@ -88,14 +88,10 @@ html {
   background-position: center center;
 }
 .header .hero {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  .header .hero {
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 @media (min-width: 481px) and (max-width: 992px) {
   .header .hero {
@@ -119,6 +115,12 @@ html {
     width: 100%;
   }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .header .hero {
+    height: 118px;
+    background: #27262a;
+  }
+}
 .header .hero__logo {
   display: flex;
   justify-content: flex-start;
@@ -126,6 +128,18 @@ html {
   padding-top: 1.8em;
   padding-left: 5.6em;
   gap: 1em;
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .header .hero__logo {
+    padding-top: 1.3em;
+    padding-left: 0;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .header .hero__logo {
+    padding-top: 0;
+    padding-left: 0;
+  }
 }
 .header .hero__logo-title {
   font-family: "Lato", sans-serif;
@@ -135,19 +149,13 @@ html {
   font-size: 1.5rem;
   line-height: 1rem;
 }
-.header .hero__logo-title:hover {
-  color: #fff;
-}
-@media (min-width: 481px) and (max-width: 992px) {
-  .header .hero__logo {
-    padding-top: 1.3em;
-    padding-left: 0;
-  }
-}
 @media (min-width: 320px) and (max-width: 480px) {
-  .header .hero__logo h2 {
+  .header .hero__logo-title {
     display: none;
   }
+}
+.header .hero__logo-title:hover {
+  color: #fff;
 }
 .header .hero__logo:hover {
   filter: brightness(0) invert(1);
@@ -211,6 +219,17 @@ html {
   padding-top: 1.9em;
   padding-left: 2.3em;
 }
+@media (min-width: 481px) and (max-width: 992px) {
+  .header .hero__buy {
+    padding-top: 24px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .header .hero__buy {
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
 .header .hero__buy-link {
   width: 145px;
   height: 37px;
@@ -235,11 +254,6 @@ html {
   color: #8D81AC;
   transition: 0.1s;
 }
-@media (min-width: 481px) and (max-width: 992px) {
-  .header .hero__buy {
-    padding-top: 24px;
-  }
-}
 .header .hero__info {
   margin-top: 4.3em;
   text-align: center;
@@ -255,6 +269,11 @@ html {
     font-size: 4.5rem;
   }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .header .hero__info-title {
+    font-size: 3rem;
+  }
+}
 .header .hero__info-subtitle {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -265,6 +284,12 @@ html {
 @media (min-width: 481px) and (max-width: 992px) {
   .header .hero__info-subtitle {
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .header .hero__info-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
   }
 }
 .header .hero__info-text {
@@ -293,6 +318,8 @@ html {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  font-size: 1.3125rem;
+  line-height: 1.4375rem;
   text-transform: capitalize;
   color: #FFFFFF;
   padding-block: 1.4em;
@@ -301,6 +328,14 @@ html {
   border-radius: 40px;
   background-color: #8D81AC;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero__button-download {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    padding-block: 0.9em;
+    padding-inline: 1.8em;
+  }
+}
 .hero__button :hover {
   background-color: #FFFFFF;
   color: #8D81AC;
@@ -308,19 +343,17 @@ html {
 }
 
 .burger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: none;
-  flex-direction: column;
-  cursor: pointer;
-  height: 37px;
-  width: 44px;
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .burger {
-    display: inline-block;
-    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    height: 37px;
+    width: 44px;
   }
 }
 .burger__line {

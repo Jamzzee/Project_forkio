@@ -9,14 +9,12 @@
 
 
 	.hero {
-
-		@include for-size(phone) {
-			align-items: center;
-		}
-
-		display: grid;
-		justify-items: center;
-		grid-template-columns: repeat(3, 1fr);
+		// position: relative;
+		@include flex;
+		justify-content: space-between;
+		// display: grid;
+		// justify-items: center;
+		// grid-template-columns: repeat(3, 1fr);
 
 
 		@include for-size(tablet) {
@@ -46,6 +44,11 @@
 			}
 		}
 
+		@include for-size(phone) {
+			// align-items: center;
+			height: 118px;
+			background: rgba(39, 38, 42, 1);
+		}
 
 	}
 
@@ -56,6 +59,16 @@
 		padding-left: 5.6em;
 		gap: 1em;
 
+		@include for-size(tablet) {
+			padding-top: 1.3em;
+			padding-left: 0;
+		}
+
+		@include for-size(phone) {
+			padding-top: 0;
+			padding-left: 0;
+		}
+
 		&-title {
 			font-family: $secondary-fonts;
 			font-weight: 700;
@@ -63,23 +76,15 @@
 			text-transform: uppercase;
 			font-size: rem(24);
 			line-height: rem(16);
+
+			@include for-size(phone) {
+				display: none;
+			}
 		}
 
 		&-title:hover {
 			color: #fff;
 		}
-
-		@include for-size(tablet) {
-			padding-top: 1.3em;
-			padding-left: 0;
-		}
-
-		@include for-size(phone) {
-			h2 {
-				display: none;
-			}
-		}
-
 	}
 
 	.hero__logo:hover {
@@ -118,8 +123,6 @@
 			}
 		}
 
-
-
 		&-link {
 			font-family: $primary-fonts;
 			font-weight: 700;
@@ -145,6 +148,15 @@
 		padding-top: 1.9em;
 		padding-left: 2.3em;
 
+		@include for-size(tablet) {
+			padding-top: 24px;
+		}
+
+		@include for-size(phone) {
+			padding-top: 0;
+			padding-left: 0;
+		}
+
 		&-link {
 			width: 145px;
 			height: 37px;
@@ -169,10 +181,6 @@
 			color: $title-color-text;
 			transition: 0.1s;
 		}
-
-		@include for-size(tablet) {
-			padding-top: 24px;
-		}
 	}
 
 	.hero__info {
@@ -188,6 +196,10 @@
 			@include for-size(tablet) {
 				font-size: rem(72);
 			}
+
+			@include for-size(phone) {
+				font-size: rem(48);
+			}
 		}
 
 		&-subtitle {
@@ -199,6 +211,11 @@
 
 			@include for-size(tablet) {
 				font-size: rem(24);
+			}
+
+			@include for-size(phone) {
+				font-size: rem(18);
+				line-height: rem(24);
 			}
 		}
 
@@ -222,12 +239,13 @@
 .hero__button {
 	@include flex;
 	transform: translateY(-50%);
-	// transform: translateX(50%);
 
 	&-download {
 		display: inline-block;
 		font-family: $primary-fonts;
 		font-weight: 700;
+		font-size: rem(21);
+		line-height: rem(23);
 		text-transform: capitalize;
 		color: $title-color;
 		padding-block: 1.4em;
@@ -235,6 +253,13 @@
 		border: 2px solid $title-color-text;
 		border-radius: 40px;
 		background-color: $title-color-text;
+
+		@include for-size(phone) {
+			font-size: rem(18);
+			line-height: rem(20);
+			padding-block: 0.9em;
+			padding-inline: 1.8em;
+		}
 	}
 
 	:hover {
@@ -247,18 +272,20 @@
 
 
 .burger {
+	display: none;
 
 	@include for-size(phone) {
-		display: inline-block;
-		align-self: flex-end;
+		@include flex;
+		flex-direction: column;
+		cursor: pointer;
+		height: 37px;
+		width: 44px;
+		// position: absolute;
+		// top: 50%;
+		// right: 0;
+		// transform: translateY(-50%)
 	}
 
-	@include flex;
-	display: none;
-	flex-direction: column;
-	cursor: pointer;
-	height: 37px;
-	width: 44px;
 
 	&__line {
 		position: relative;
