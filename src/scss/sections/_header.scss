@@ -9,13 +9,9 @@
 
 
 	.hero {
-		// position: relative;
+		position: relative;
 		@include flex;
 		justify-content: space-between;
-		// display: grid;
-		// justify-items: center;
-		// grid-template-columns: repeat(3, 1fr);
-
 
 		@include for-size(tablet) {
 			height: 118px;
@@ -140,8 +136,64 @@
 			color: $title-color;
 			transition: 0.1s;
 		}
+	}
 
+	.burger__menu {
+		display: none;
 
+		@include for-size(phone) {
+			display: block;
+		}
+
+		&-list {
+			position: absolute;
+			// visibility: hidden;
+			top: 118px;
+			left: 50%;
+			transform: translate(-50%);
+			width: 293px;
+			transition-duration: 0.25s;
+		}
+
+		&-item:last-child::after {
+			content: '';
+			position: absolute;
+			width: 292px;
+			height: 14px;
+			background: #333333;
+		}
+
+		&-link {
+			position: relative;
+			display: block;
+			font-family: $primary-fonts;
+			font-weight: 400;
+			font-size: rem(26);
+			color: $secondary-text-color;
+			text-transform: capitalize;
+			padding: 29px 50px 21px 35px;
+			background: #333333;
+			border-bottom: 3px solid #3b3b3b;
+		}
+
+		&-link::after {
+			content: '';
+			position: absolute;
+			width: 8px;
+			height: 53px;
+			background: $title-color-text;
+			left: 0px;
+			top: calc((100% - 53px) / 2);
+			opacity: 0;
+		}
+
+		&-link:focus {
+			color: $title-color-text;
+		}
+
+		.burger__menu-item:active .burger__menu-link::after {
+			opacity: 1;
+		}
 	}
 
 	.hero__buy {

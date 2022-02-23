@@ -88,6 +88,7 @@ html {
   background-position: center center;
 }
 .header .hero {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,6 +215,57 @@ html {
 .header .hero__menu :hover {
   color: #FFFFFF;
   transition: 0.1s;
+}
+.header .burger__menu {
+  display: none;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .header .burger__menu {
+    display: block;
+  }
+}
+.header .burger__menu-list {
+  position: absolute;
+  top: 118px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 293px;
+  transition-duration: 0.25s;
+}
+.header .burger__menu-item:last-child::after {
+  content: "";
+  position: absolute;
+  width: 292px;
+  height: 14px;
+  background: #333333;
+}
+.header .burger__menu-link {
+  position: relative;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  color: #ffffff;
+  text-transform: capitalize;
+  padding: 29px 50px 21px 35px;
+  background: #333333;
+  border-bottom: 3px solid #3b3b3b;
+}
+.header .burger__menu-link::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 53px;
+  background: #8D81AC;
+  left: 0px;
+  top: calc((100% - 53px) / 2);
+  opacity: 0;
+}
+.header .burger__menu-link:focus {
+  color: #8D81AC;
+}
+.header .burger__menu .burger__menu-item:active .burger__menu-link::after {
+  opacity: 1;
 }
 .header .hero__buy {
   padding-top: 1.9em;
