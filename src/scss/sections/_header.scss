@@ -3,11 +3,6 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 
-	@include for-size(tablet) {
-		// background-image: url(../../../dist/images/header-tab-img.png);
-	}
-
-
 	.hero {
 		position: relative;
 		@include flex;
