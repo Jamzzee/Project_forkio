@@ -1,10 +1,15 @@
-.pricing-background {
-	margin-top: -15px;
+.pricing__background {
 	background: rgba(74, 59, 78, 1);
+	margin-top: -15px;
+	padding-bottom: 6em;
+	text-align: center;
 
+	@include for-size(phone) {
+		padding-bottom: 1em;
+	}
 }
 
-.pricing-title {
+.pricing__title {
 	font-family: $primary-fonts;
 	font-weight: 700;
 	text-transform: capitalize;
@@ -12,7 +17,7 @@
 	color: $title-color;
 	font-size: rem(48);
 	line-height: rem(50);
-	margin-bottom: 2.8em;
+	margin-bottom: 3.8em;
 	padding-top: 2em;
 
 	@include for-size(tablet) {
@@ -25,166 +30,346 @@
 		font-size: rem(28);
 		line-height: rem(42);
 		padding-top: .01em;
-		margin-bottom: 2em; //Проверить марджин.
+		margin-bottom: 32px;
 	}
-
 }
 
 .pricing__content {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 1em;
-	justify-content: center;
-	padding-bottom: 9.3em;
+	@include flex;
+	flex-wrap: nowrap;
+	padding-inline: 4.1em;
 
 	@include for-size(tablet) {
+		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		align-items: flex-start;
-		gap: 1.5em;
-		margin-right: 6.7em;
-		margin-left: 7.5em;
+		justify-content: center;
+		justify-items: center;
+		grid-row-gap: 30px;
+		padding-inline: 0;
+		margin-inline: 121px 109px;
 	}
 
 	@include for-size(phone) {
+		display: grid;
 		grid-template-columns: 1fr;
 		justify-content: center;
-		align-items: center;
-		gap: 1em;
-		padding-bottom: 1.1em;
+		justify-items: center;
+		gap: 18px;
+		margin-inline: 31px 32px;
+	}
+}
+
+.pricing__students,
+.pricing__professional,
+.pricing__agency {
+	width: 257px;
+	margin-right: 0.9em;
+
+	@include for-size(tablet) {
+		margin-right: 0;
 	}
 
-	:nth-child(1) {
-		:nth-child(2) {
-			margin-bottom: 5.8em;
+	@include for-size(phone) {
+		margin-right: 0;
+	}
+}
 
-			@include for-size(tablet) {
-				margin-bottom: 4.4em;
-			}
+.pricing__enterprise {
+	width: 257px;
+}
 
-			@include for-size(phone) {
-				margin-bottom: 0;
-			}
-		}
+.pricing__students,
+.pricing__professional,
+.pricing__enterprise {
+	background-color: rgba(255, 255, 255, 0.06);
+}
+
+.pricing__students-wrap-students-title,
+.pricing__professional-wrap-title,
+.pricing__enterprise-wrap-title {
+	background-color: rgba(255, 255, 255, 0.06);
+}
+
+.pricing__agency {
+	background: rgba(60, 41, 63, 0.84);
+	min-width: 299px;
+	height: 560px;
+
+	@include for-size(tablet) {
+		margin-right: 25px;
+	}
+}
+
+.pricing__students-wrap-students-title {
+	font-family: $primary-fonts;
+	font-weight: 400;
+	font-size: rem(24);
+	color: $secondary-text-color;
+	text-transform: uppercase;
+	padding: 2.2em 3em;
+}
+
+.pricing__professional-wrap-title {
+	font-family: $primary-fonts;
+	font-weight: 400;
+	font-size: rem(24);
+	color: $secondary-text-color;
+	text-transform: uppercase;
+	padding: 2.2em 1.8em;
+}
+
+
+.pricing__agency-wrap-title {
+	background: rgba(74, 55, 77, 0.84);
+	font-family: $primary-fonts;
+	font-weight: 700;
+	font-size: rem(24);
+	color: $secondary-text-color;
+	text-transform: uppercase;
+	padding: 43px 3em;
+}
+
+.pricing__enterprise-wrap-title {
+	font-family: $primary-fonts;
+	font-weight: 400;
+	font-size: rem(24);
+	color: $secondary-text-color;
+	text-transform: uppercase;
+	padding: 2.2em 3em;
+}
+
+.pricing__students-wrap-info {
+	&-cost {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(60);
+		line-height: rem(90);
+		color: $secondary-text-color;
+		padding: 30px 0 20px;
 	}
 
-	:nth-child(2) {
-		:nth-child(1) {
-			padding: 18px 21px;
-		}
+	&-text {
+		position: relative;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(14);
+		line-height: rem(16);
+		padding-bottom: 38px;
+		text-transform: uppercase;
 	}
 
-	:nth-child(3) {
-
-		@include for-size(tablet) {
-			min-width: 299px;
-		}
-
-		.pricing__content-wrap-title-block {
-			background: rgba(60, 41, 63, 0.84);
-			padding: 50px 105px;
-			margin-top: -63px;
-
-			@include for-size(phone) {
-				margin-top: 0;
-			}
-		}
-
-		.pricing__content-wrap-info-cost {
-			font-size: rem(82);
-			line-height: rem(90);
-		}
-
-		:nth-child(2) {
-			background: rgba(74, 55, 77, 0.84);
-		}
-
-		.pricing__content-wrap-info-purchase {
-			margin-top: 50px;
-		}
+	&-text::before {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		min-width: 60px;
+		height: 5px;
+		background-color: #8D81AC;
 	}
 
+	&-license {
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(16);
+		line-height: rem(18);
+		padding-bottom: 69px;
+		padding-top: 30px;
+		text-transform: capitalize;
+	}
 
-	&-wrap {
+	&-purchase {
+		display: inline-block;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(15);
+		text-transform: uppercase;
+		padding: 15px 38px;
+		margin-bottom: 36px;
+		background: rgba(255, 255, 255, 0.15);
+		border: none;
+		border-radius: 2.5em;
+		mix-blend-mode: normal;
+	}
+}
 
-		&-title-block {
-			text-align: center;
-			padding: 36px 63px 36px 63px;
-			background-color: rgba(255, 255, 255, 0.06);
+.pricing__professional-wrap-info {
+	&-cost {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(60);
+		line-height: rem(90);
+		color: $secondary-text-color;
+		padding: 30px 0 20px;
+	}
 
-		}
+	&-text {
+		position: relative;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(14);
+		line-height: rem(16);
+		padding-bottom: 38px;
+		text-transform: uppercase;
+	}
 
-		&-title {
-			font-family: $primary-fonts;
-			font-weight: 400;
-			font-size: rem(24);
-			color: $secondary-text-color;
-			text-transform: uppercase;
-		}
+	&-text::before {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		min-width: 60px;
+		height: 5px;
+		background-color: #8D81AC;
+	}
 
-		&-info {
-			@include flex;
-			flex-direction: column;
-			background: rgba(255, 255, 255, 0.11);
+	&-license {
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(16);
+		line-height: rem(18);
+		padding-bottom: 50px;
+		padding-top: 30px;
+		text-transform: capitalize;
+	}
 
-			&-text,
-			&-license,
-			&-purchase {
-				display: inline-block;
-				font-family: $primary-fonts;
-				font-weight: 400;
-				color: $secondary-text-color;
-			}
+	&-purchase {
+		display: inline-block;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(15);
+		text-transform: uppercase;
+		padding: 15px 38px;
+		margin-bottom: 36px;
+		background: rgba(255, 255, 255, 0.15);
+		border: none;
+		border-radius: 2.5em;
+		mix-blend-mode: normal;
+	}
+}
 
-			&-cost {
-				font-family: $primary-fonts;
-				font-weight: 700;
-				font-size: rem(60);
-				line-height: rem(90);
-				color: $secondary-text-color;
-				margin-top: .5em;
-				margin-bottom: .2em;
-			}
+.pricing__agency-wrap-info {
+	&-cost {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(82);
+		line-height: rem(90);
+		color: $secondary-text-color;
+		padding: 14px 0 16px;
+	}
 
-			&-text {
-				position: relative;
-				font-size: rem(14);
-				line-height: rem(16);
-				margin-bottom: 4.5em;
-				text-transform: uppercase;
-			}
+	&-text {
+		position: relative;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(14);
+		line-height: rem(16);
+		padding-bottom: 46px;
+		text-transform: uppercase;
+	}
 
-			&-text::before {
-				position: absolute;
-				content: "";
-				bottom: -2.5em;
-				left: 50%;
-				transform: translate(-50%, 50%);
-				min-width: 60px;
-				height: 5px;
-				background-color: #8D81AC;
-			}
+	&-text::before {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		min-width: 60px;
+		height: 5px;
+		background-color: #8D81AC;
+	}
 
-			&-license {
-				font-size: rem(16);
-				line-height: rem(18);
-				margin-bottom: 4.3em;
-				text-transform: capitalize;
-				text-align: center;
-				max-width: 211px;
-			}
+	&-license {
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(16);
+		line-height: rem(18);
+		padding-bottom: 107px;
+		padding-top: 40px;
+		text-transform: capitalize;
+	}
 
+	&-purchase {
+		display: inline-block;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(15);
+		text-transform: uppercase;
+		padding: 15px 38px;
+		margin-bottom: 47px;
+		background: rgba(255, 255, 255, 0.15);
+		border: none;
+		border-radius: 2.5em;
+		mix-blend-mode: normal;
+	}
+}
 
-			&-purchase {
-				font-size: rem(15);
-				text-transform: uppercase;
-				padding-block: .8em;
-				padding-inline: 2.2em;
-				margin-bottom: 3.7em;
-				background: rgba(255, 255, 255, 0.15);
-				border: none;
-				border-radius: 2.5em;
-				mix-blend-mode: normal;
-			}
-		}
+.pricing__enterprise-wrap-info {
+	&-cost {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(60);
+		line-height: rem(90);
+		color: $secondary-text-color;
+		padding: 30px 0 20px;
+	}
+
+	&-text {
+		position: relative;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(14);
+		line-height: rem(16);
+		padding-bottom: 38px;
+		text-transform: uppercase;
+	}
+
+	&-text::before {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		min-width: 60px;
+		height: 5px;
+		background-color: #8D81AC;
+	}
+
+	&-license {
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(16);
+		line-height: rem(18);
+		padding-bottom: 50px;
+		padding-top: 30px;
+		text-transform: capitalize;
+	}
+
+	&-purchase {
+		display: inline-block;
+		font-family: $primary-fonts;
+		font-weight: 400;
+		color: $secondary-text-color;
+		font-size: rem(15);
+		text-transform: uppercase;
+		padding: 15px 38px;
+		margin-bottom: 36px;
+		background: rgba(255, 255, 255, 0.15);
+		border: none;
+		border-radius: 2.5em;
+		mix-blend-mode: normal;
 	}
 }
