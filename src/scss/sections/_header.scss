@@ -134,7 +134,9 @@
 
 	.burger__menu {
 		display: none;
+		opacity: 0;
 		pointer-events: none;
+		visibility: hidden;
 
 		@include for-size(phone) {
 			display: block;
@@ -142,12 +144,11 @@
 
 		&-list {
 			position: absolute;
-			visibility: hidden;
 			top: 118px;
 			left: 50%;
 			transform: translate(-50%);
 			width: 293px;
-			transition-duration: 0.25s;
+			transition-duration: all 1s ease 0s;
 		}
 
 		&-item:last-child::after {
@@ -190,6 +191,14 @@
 			opacity: 1;
 		}
 	}
+
+
+	.burger__menu._active {
+		opacity: 1;
+		pointer-events: all;
+		visibility: visible;
+	}
+
 
 	.hero__buy {
 		padding-top: 1.9em;
@@ -318,7 +327,7 @@
 
 
 
-.hero__burger {
+.burger {
 	display: none;
 
 	@include for-size(phone) {
@@ -329,7 +338,7 @@
 		width: 44px;
 	}
 
-	&-line {
+	&__line {
 		position: relative;
 		width: 26px;
 		height: 3px;
@@ -366,22 +375,15 @@
 	}
 }
 
-.burger__menu.active {
-	pointer-events: all;
-
-	&-list {
-		visibility: visible;
-	}
-}
-
-.hero__burger-line.close {
+.burger__line._close {
 	background: transparent;
 
 	&::before {
-		transform: rotate(45deg) translate(4px, 4px);
+		width: 26px;
+		transform: rotate(45deg) translate(0, 11px);
 	}
 
 	&::after {
-		transform: rotate(-45deg) translate(2px, -2px);
+		transform: rotate(-45deg) translate(1px, 1px);
 	}
 }
