@@ -1,16 +1,19 @@
-#Список использованных технологий:
-Node.js
-Git bash
+# Список использованных технологий:
+* Node.js 
+* Git bash
 
-##В проекте принимают участие: 
-_asterisks_Мирошниченко Андрей_asterisks_;
-Виталий Чалбаш.
+## В проекте принимают участие: 
+* *Мирошниченко Андрей*
+* *Виталий Чалбаш*
 
-Мирошниченко Андрей - студента №1
-Виталий Чалбаш - студента №2
+- **Мирошниченко Андрей** - студента №1
+- **Виталий Чалбаш** - студента №2
 
-Server, - hot reload at  http://localhost:3000/
+### Link for GitHub page: 
+[https://jamzzee.github.io/forkio/]
+
+### Server, - hot reload at  http://localhost:3000/
 npm run dev
 
-Output will be at dist
+### Output will be at *dist*
 npm run build:prod
