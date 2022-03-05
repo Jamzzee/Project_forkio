@@ -8,7 +8,7 @@ btnMenu.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-	if (!burgerLine.contains(e.target)) {
+	if (!burgerLine.contains(e.target) && !burgerMenu.contains(e.target)) {
 		burgerLine.classList.remove("_close");
 		burgerMenu.classList.remove("_active");
 	}
