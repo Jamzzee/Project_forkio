@@ -20,38 +20,51 @@
 
 <body>
     <header class="header">
-        <section class="hero container">
-
+        <div class="hero container">
             <div class="hero__logo">
                 <img src="./dist/images/pencil-logo.png" class="hero__logo-img" alt="some image"></img>
                 <h2 class="hero__logo-title">FORKIO</h2>
             </div>
 
-            <nav class="hero__menu">
+            <div class="hero__menu">
                 <ul class="hero__menu-list">
                     <li class="hero__menu-item"><a class="hero__menu-link" href="#">Overview</a></li>
-                    <li class="hero__menu-item"><a class="hero__menu-link" href="#">About Fork</a></li>
+                    <li class="hero__menu-item"><a class="hero__menu-link" href="#">AboutFork</a></li>
                     <li class="hero__menu-item"><a class="hero__menu-link" href="#">Buying Options</a></li>
                     <li class="hero__menu-item"><a class="hero__menu-link" href="#">Support</a></li>
                 </ul>
-            </nav>
-            <div class="hero__buy">
-                <a class="hero__buy-link" href="#">Buy Now</a>
             </div>
-        </section>
 
-        <section class="hero__info">
+            <div class="burger__menu">
+                <ul class="burger__menu-list">
+                    <li class="burger__menu-item"><a class="burger__menu-link" href="#">Overview</a></li>
+                    <li class="burger__menu-item"><a class="burger__menu-link" href="#">AboutFork</a></li>
+                    <li class="burger__menu-item"><a class="burger__menu-link" href="#">Buying Options</a></li>
+                    <li class="burger__menu-item"><a class="burger__menu-link" href="#">Support</a></li>
+                </ul>
+            </div>
+
+
+            <div class="hero__buy">
+                <button class="hero__buy-link" href="#">Buy Now</button>
+            </div>
+
+            <div class="burger">
+                <div class="burger__line"></div>
+            </div>
+
+        </div>
+
+        <section class="hero__info container">
             <h1 class="hero__info-title">Fork App</h1>
             <p class="hero__info-subtitle">A real gamechanger in the world of web development</p>
             <p class="hero__info-text">v. 2.8 For Mac and Windows</p>
         </section>
-
-
-        <section class="hero__button">
-            <a class="hero__button-download">Download For Free Now</a>
-        </section>
-
     </header>
+
+    <section class="hero__button container">
+        <a class="hero__button-download">Download For Free Now</a>
+    </section>
 
     <main>
         <section class="editor">
@@ -97,9 +110,8 @@
                 </div>
             </div>
         </section>
-
         <section class="whatYouGet-bgcolor">
-            <div class="whatYouGet">
+            <div class="whatYouGet container">
                 <div class="whatYouGet__info">
                     <div class="whatYouGet__info-wrap">
                         <div class="whatYouGet__info-img">
@@ -146,15 +158,120 @@
                         </div>
                     </div>
                 </div>
-                <div class="whatYouGet__code">
-                    <h1 class="whatYouGet__code-title"><span>
+
+                <div class="whatYouGet__title">
+                    <h1 class="whatYouGet__title-info">
+                        <span>
                             <</span>Here is what you get<span>>
-                        </span></h1>
-                    <picture class="whatYouGet__code-image">
-                        <source media="((min-width:320px) and (max-width:480px))"
-                            srcset="./dist/images/editor-pic5-mob.png">
-                        <img src="./dist/images/editor-pic5.png" alt="code-img">
-                    </picture>
+                        </span>
+                    </h1>
+                </div>
+                <picture class="whatYouGet__code">
+                    <source media="((min-width:320px) and (max-width:480px))"
+                        srcset="./dist/images/editor-pic5-mob.png">
+                    <img src="./dist/images/editor-pic5.png" alt="code-img">
+                </picture>
+
+            </div>
+        </section>
+
+        <section class="people-background">
+            <div class="people__content container">
+                <h1 class="people__content-title">People Are Talking About Fork</h1>
+                <div class="people__content-wrap">
+                    <div class="people__content-item">
+                        <img src="./dist/images/people-pic1.png" alt="our-partner" class="people__content-item-img">
+                        <p class="people__content-item-text">Sed vestibulum scelerisque urna, eu finibus leo facilisis
+                            sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+                    </div>
+                    <div class="people__content-item">
+                        <img src="./dist/images/people-pic3.png" alt="our-partner" class="people__content-item-img">
+                        <p class="people__content-item-text">Donec euismod dolor ut ultricies consequat. Vivamus urna
+                            ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+                    </div>
+                    <div class="people__content-item">
+                        <img src="./dist/images/people-pic5.png" alt="our-partner" class="people__content-item-img">
+                        <p class="people__content-item-text">In efficitur in velit et tempus. Duis nec odio dapibus,
+                            suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula.</p>
+                    </div>
+                    <div class="people__content-item">
+                        <img src="./dist/images/people-pic2.png" alt="our-partner" class="people__content-item-img">
+                        <p class="people__content-item-text">Sed vestibulum scelerisque urna, eu finibus leo facilisis
+                            sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+                    </div>
+                    <div class="people__content-item">
+                        <img src="./dist/images/people-pic4.png" alt="our-partner" class="people__content-item-img">
+                        <p class="people__content-item-text">Praesent ut eros tristique, malesuada lectus vel, lobortis
+                            massa. Nulla faucibus lorem id arcu consequat faucibus.</p>
+                    </div>
+                    <div class="people__content-item">
+                        <img src="./dist/images/people-pic6.png" alt="our-partner" class="people__content-item-img">
+                        <p class="people__content-item-text">Fusce pharetra erat id odio blandit, nec pharetra eros
+                            venenatis. Pellentesque porttitor cursus massa et vestibulum.</p>
+                    </div>
+                </div>
+                <p class="people__content-footer container">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi
+                    mauris,
+                    facilisis vitae aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec
+                    elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus.</p>
+            </div>
+        </section>
+
+        <section class="pricing__background">
+            <div class="container">
+                <h1 class="pricing__title">Fork Subscription Pricing</h1>
+                <div class="pricing__content">
+
+                    <div class="pricing__students">
+                        <div class="pricing__students-wrap">
+                            <h2 class="pricing__students-wrap-students-title">Students</h2>
+                        </div>
+                        <div class="pricing__students-wrap-info">
+                            <p class="pricing__students-wrap-info-cost">$29</p>
+                            <p class="pricing__students-wrap-info-text">per month</p>
+                            <p class="pricing__students-wrap-info-license">Personal License</p>
+                            <a href="#" class="pricing__students-wrap-info-purchase">purchase</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing__professional">
+                        <div class="pricing__professional-wrap">
+                            <h2 class="pricing__professional-wrap-title">professional</h2>
+                        </div>
+                        <div class="pricing__professional-wrap-info">
+                            <p class="pricing__professional-wrap-info-cost">$59</p>
+                            <p class="pricing__professional-wrap-info-text">per month</p>
+                            <p class="pricing__professional-wrap-info-license">Professional License Email Support</p>
+                            <a href="#" class="pricing__professional-wrap-info-purchase">purchase</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing__agency">
+                        <div class="pricing__agency-wrap">
+                            <h2 class="pricing__agency-wrap-title">agency</h2>
+                        </div>
+
+                        <div class="pricing__agency-wrap-info">
+                            <p class="pricing__agency-wrap-info-cost">$99</p>
+                            <p class="pricing__agency-wrap-info-text">per month</p>
+                            <p class="pricing__agency-wrap-info-license">1-12 Team Members Phone Support</p>
+                            <a href="#" class="pricing__agency-wrap-info-purchase">purchase</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing__enterprise">
+                        <div class="pricing__enterprise-wrap">
+                            <h2 class="pricing__enterprise-wrap-title">enterprise</h2>
+                        </div>
+                        <div class="pricing__enterprise-wrap-info">
+                            <p class="pricing__enterprise-wrap-info-cost">$159</p>
+                            <p class="pricing__enterprise-wrap-info-text">per month</p>
+                            <p class="pricing__enterprise-wrap-info-license">Unlimited Team Members 24/ 7 Phone Support
+                            </p>
+                            <a href="#" class="pricing__enterprise-wrap-info-purchase">purchase</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

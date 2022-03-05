@@ -1,15 +1,14 @@
 {
-  "name": "step-project-forkio",
+  "name": "step_project-forkio",
   "version": "1.0.0",
   "type": "module",
   "description": "Step Project Forkio for courses Dan.IT",
   "main": "main.js",
   "scripts": {
-    "start": "gulp",
     "dev": "gulp dev",
-    "build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build --prod"
   },
+  "keywords": [],
   "author": "Andrey Miroshnichenko, Vitalii Chalbash",
   "license": "ISC",
   "devDependencies": {

@@ -1,142 +1,321 @@
 .header {
-	position: relative;
-	max-height: 800px;
-	background-image: url("../../../dist/images/back-header.png");
-	background-size: cover;
+	background-image: url("../../../dist/images/hero-bg.png");
 	background-repeat: no-repeat;
-	background-position: center;
-}
+	background-position: center center;
 
-.hero {
-	@include flex;
-	justify-content: flex-end;
-	padding-block: 1.9em;
-}
-
-.hero__logo {
-	@include flex;
-	gap: 1em;
-	margin-right: 19.5em;
-
-	&-title {
-		font-family: $secondary-fonts;
-		font-weight: 700;
-		color: $title-color-text;
-		text-transform: uppercase;
-		font-size: rem(24);
-		line-height: rem(16);
-	}
-
-	&-title:hover {
-		color: #fff;
-	}
-
-	&-img {
-		display: inline-block;
-	}
-
-}
-
-.hero__logo:hover {
-	filter: brightness(0) invert(1);
-}
-
-.hero__menu {
-	margin-right: 4.2em;
-
-	&-list {
+	.hero {
+		position: relative;
 		@include flex;
-		gap: 3em;
-	}
+		justify-content: space-between;
 
-	&-link {
-		font-family: $primary-fonts;
-		font-weight: 700;
-		font-size: rem(16);
-		line-height: rem(17);
-		color: $title-color-text;
-		text-transform: capitalize;
-	}
+		@include for-size(tablet) {
+			height: 118px;
+			background: rgba(39, 38, 42, 1);
+			display: grid;
+			align-content: center;
+			grid-template-columns: repeat(2, 1fr);
 
-	:hover {
-		color: $title-color;
-		transition: 0.1s;
-	}
-}
+			grid-template-areas:
+				"hero__logo hero__buy"
+				"hero__menu hero__menu";
 
-.hero__buy {
-	&-link {
-		font-family: $primary-fonts;
-		font-weight: 700;
-		color: $title-color;
-		font-size: rem(16);
-		line-height: rem(17);
-		text-transform: capitalize;
-		padding-inline: 1.25em;
-		padding-block: 0.6em;
-		background-color: $title-color-text;
-		border: 1px solid $title-color-text;
-		border-radius: 2.5em;
-	}
+			.hero__logo {
+				grid-area: hero__logo;
+				justify-self: flex-start;
+			}
 
-	:hover {
-		background-color: $bg-white-color;
-		color: $title-color-text;
-		transition: 0.1s;
-	}
-}
+			.hero__buy {
+				grid-area: hero__buy;
+				justify-self: flex-end;
+			}
 
-.hero__info {
-	margin-top: 5.1em;
-	text-align: center;
+			.hero__menu {
+				grid-area: hero__menu;
+				width: 100%;
+			}
+		}
 
-	&-title {
-		font-family: $primary-fonts;
-		font-weight: 700;
-		font-size: rem(82);
-		color: $title-color;
-	}
-
-	&-subtitle {
-		font-family: $secondary-fonts;
-		font-weight: 400;
-		font-size: rem(30);
-		color: $title-color-text;
-		margin-top: 1.1em;
+		@include for-size(phone) {
+			height: 118px;
+			background: rgba(39, 38, 42, 1);
+		}
 
 	}
 
-	&-text {
-		display: inline-block;
-		text-transform: uppercase;
-		font-family: $primary-fonts;
-		font-weight: 400;
-		font-size: rem(16);
-		color: $text-color;
-		margin-top: 1.1em;
-		margin-bottom: 28em;
+
+	.hero__logo {
+		@include flex(flex-start);
+		padding-top: 1.8em;
+		padding-left: 5.6em;
+		gap: 1em;
+
+		@include for-size(tablet) {
+			padding-top: 1.3em;
+			padding-left: 0;
+		}
+
+		@include for-size(phone) {
+			padding-top: 0;
+			padding-left: 0;
+		}
+
+		&-title {
+			font-family: $secondary-fonts;
+			font-weight: 700;
+			color: $title-color-text;
+			text-transform: uppercase;
+			font-size: rem(24);
+			line-height: rem(16);
+
+			@include for-size(phone) {
+				display: none;
+			}
+		}
+
+		&-title:hover {
+			color: #fff;
+		}
+	}
+
+	.hero__logo:hover {
+		filter: brightness(0) invert(1);
+	}
+
+	.hero__menu {
+		@include flex;
+		align-items: flex-start;
+		margin-left: 7em;
+
+		@include for-size(tablet) {
+			padding-bottom: 1.1em;
+			margin-left: 0;
+		}
+
+		@include for-size(phone) {
+			display: none;
+		}
+
+		&-list {
+			@include flex;
+			gap: 3em;
+
+			@include for-size(tablet) {
+				gap: 2em;
+			}
+		}
+
+		&-item {
+			padding-top: 2.5em;
+			white-space: nowrap;
+
+			@include for-size(tablet) {
+				padding-top: 1em;
+			}
+		}
+
+		&-link {
+			font-family: $primary-fonts;
+			font-weight: 700;
+			font-size: rem(16);
+			line-height: rem(17);
+			color: $title-color-text;
+			text-transform: capitalize;
+
+			@include for-size(tablet) {
+				line-height: rem(16);
+			}
+		}
+
+		:hover {
+			color: $title-color;
+			transition: 0.1s;
+		}
+	}
+
+	.burger__menu {
+		display: none;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+
+		@include for-size(phone) {
+			display: block;
+		}
+
+		&-list {
+			position: absolute;
+			top: 118px;
+			left: 50%;
+			transform: translate(-50%);
+			width: 293px;
+			transition-duration: all 1s ease 0s;
+		}
+
+		&-item:last-child::after {
+			content: '';
+			position: absolute;
+			width: 292px;
+			height: 14px;
+			background: #333333;
+		}
+
+		&-link {
+			position: relative;
+			display: block;
+			font-family: $primary-fonts;
+			font-weight: 400;
+			font-size: rem(26);
+			color: $secondary-text-color;
+			text-transform: capitalize;
+			padding: 29px 50px 21px 35px;
+			background: #333333;
+			border-bottom: 3px solid #3b3b3b;
+		}
+
+		&-link::after {
+			content: '';
+			position: absolute;
+			width: 8px;
+			height: 53px;
+			background: $title-color-text;
+			left: 0px;
+			top: calc((100% - 53px) / 2);
+			opacity: 0;
+		}
+
+		&-link:focus {
+			color: $title-color-text;
+		}
+
+		.burger__menu-item:active .burger__menu-link::after {
+			opacity: 1;
+		}
+	}
+
+
+	.burger__menu._active {
+		opacity: 1;
+		pointer-events: all;
+		visibility: visible;
+	}
+
+
+	.hero__buy {
+		padding-top: 1.9em;
+		padding-left: 2.3em;
+
+		@include for-size(tablet) {
+			padding-top: 24px;
+		}
+
+		@include for-size(phone) {
+			padding-top: 0;
+			padding-left: 0;
+		}
+
+		&-link {
+			width: 145px;
+			height: 37px;
+			font-family: $primary-fonts;
+			font-weight: 700;
+			color: $title-color;
+			font-size: rem(16);
+			line-height: rem(17);
+			text-transform: capitalize;
+			background-color: $title-color-text;
+			border: 1px solid $title-color-text;
+			border-radius: 2.5em;
+
+			@include for-size(tablet) {
+				line-height: rem(16);
+				padding-right: 0;
+			}
+		}
+
+		:hover {
+			background-color: $bg-white-color;
+			color: $title-color-text;
+			transition: 0.1s;
+		}
+	}
+
+	.hero__info {
+		margin-top: 4.3em;
+		text-align: center;
+
+		&-title {
+			font-family: $primary-fonts;
+			font-weight: 700;
+			font-size: rem(82);
+			color: $title-color;
+
+			@include for-size(tablet) {
+				font-size: rem(72);
+			}
+
+			@include for-size(phone) {
+				font-size: rem(48);
+			}
+		}
+
+		&-subtitle {
+			font-family: $secondary-fonts;
+			font-weight: 400;
+			font-size: rem(30);
+			color: $title-color-text;
+			margin-top: 1.1em;
+
+			@include for-size(tablet) {
+				font-size: rem(24);
+			}
+
+			@include for-size(phone) {
+				font-size: rem(18);
+				line-height: rem(24);
+			}
+		}
+
+		&-text {
+			display: inline-block;
+			text-transform: uppercase;
+			font-family: $primary-fonts;
+			font-weight: 400;
+			font-size: rem(16);
+			color: $text-color;
+			margin-top: 1.1em;
+			margin-bottom: 28em;
+
+			@include for-size(tablet) {
+				font-size: rem(14);
+			}
+		}
 	}
 }
 
 .hero__button {
-	position: absolute;
-	right: 50%;
-	bottom: -2.5em;
-	transform: translate(50%);
+	@include flex;
+	transform: translateY(-50%);
 
 	&-download {
 		display: inline-block;
 		font-family: $primary-fonts;
 		font-weight: 700;
 		font-size: rem(21);
-		line-height: rem(22);
+		line-height: rem(23);
 		text-transform: capitalize;
 		color: $title-color;
 		padding-block: 1.4em;
 		padding-inline: 3.8em;
 		border: 2px solid $title-color-text;
 		border-radius: 40px;
-		background: $title-color-text;
+		background-color: $title-color-text;
+
+		@include for-size(phone) {
+			font-size: rem(18);
+			line-height: rem(20);
+			padding-block: 0.9em;
+			padding-inline: 1.8em;
+		}
 	}
 
 	:hover {
@@ -148,15 +327,63 @@
 
 
 
+.burger {
+	display: none;
 
+	@include for-size(phone) {
+		@include flex;
+		flex-direction: column;
+		cursor: pointer;
+		height: 37px;
+		width: 44px;
+	}
 
+	&__line {
+		position: relative;
+		width: 26px;
+		height: 3px;
+		background: $bg-white-color;
+		border-radius: 4px;
+		transition: all .5s ease-in-out;
 
+		&::before {
+			position: absolute;
+			left: 11px;
+			background: $bg-white-color;
+			content: "";
+			width: 15px;
+			height: 3px;
+			transition: all .5s ease-in-out;
+		}
 
+		&::after {
+			position: absolute;
+			background: $bg-white-color;
+			content: "";
+			width: 26px;
+			height: 3px;
+			transition: all .5s ease-in-out;
+		}
 
+		&::before {
+			top: -4px;
+		}
 
+		&::after {
+			top: 4px;
+		}
+	}
+}
 
-// @media((min-width: 320px) and (max-width:480px)) {}
+.burger__line._close {
+	background: transparent;
 
-// @media((min-width: 481px) and (max-width:992px)) {}
+	&::before {
+		width: 26px;
+		transform: rotate(45deg) translate(0, 11px);
+	}
 
-// @media((min-width: 993px) and (max-width:1200px)) {}
+	&::after {
+		transform: rotate(-45deg) translate(1px, 1px);
+	}
+}

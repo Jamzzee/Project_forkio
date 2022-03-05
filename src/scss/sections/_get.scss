@@ -1,19 +1,104 @@
 .whatYouGet-bgcolor {
 	background-color: $bg-code-color;
+
+	@include for-size(tablet) {
+		background-color: $bg-white-color;
+	}
+
+	@include for-size(phone) {
+		background-color: $bg-white-color;
+	}
 }
 
 .whatYouGet {
-	@include flex;
-	padding-top: 6.1em;
-	padding-left: 5.6em;
-	padding-bottom: 2.2em;
+	display: grid;
+	justify-items: start;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas:
+		"whatYouGet__info whatYouGet__title"
+		"whatYouGet__info whatYouGet__code";
+
+	.whatYouGet__info {
+		grid-area: whatYouGet__info;
+	}
+
+	.whatYouGet__title {
+		grid-area: whatYouGet__title;
+	}
+
+	.whatYouGet__code {
+		grid-area: whatYouGet__code;
+	}
+
+	@include for-size(tablet) {
+		justify-items: center;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"whatYouGet__title"
+			"whatYouGet__info"
+			"whatYouGet__code";
+
+		.whatYouGet__info {
+			grid-area: whatYouGet__info;
+			justify-self: start;
+		}
+
+		.whatYouGet__title {
+			grid-area: whatYouGet__title;
+		}
+
+		.whatYouGet__code {
+			grid-area: whatYouGet__code;
+			justify-self: end;
+		}
+	}
+
+	@include for-size(phone) {
+		justify-items: center;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"whatYouGet__title"
+			"whatYouGet__info"
+			"whatYouGet__code";
+
+		.whatYouGet__info {
+			grid-area: whatYouGet__info;
+			justify-self: start;
+		}
+
+		.whatYouGet__title {
+			grid-area: whatYouGet__title;
+		}
+
+		.whatYouGet__code {
+			grid-area: whatYouGet__code;
+			justify-self: end;
+		}
+
+	}
 }
 
 .whatYouGet__info {
 	@include flex;
 	flex-direction: column;
 	gap: 2em;
-	margin-right: 3.1em;
+	padding-top: 6.1em;
+	padding-left: 5.6em;
+	padding-bottom: 4.4em;
+
+	@include for-size(tablet) {
+		padding-top: 3.2em;
+		padding-left: 1.8em;
+		padding-bottom: 4.6em;
+	}
+
+	@include for-size(phone) {
+		padding-top: 2.2em;
+		padding-left: 1.8em;
+		padding-bottom: 4em;
+	}
 
 	&-wrap {
 		@include flex;
@@ -21,12 +106,20 @@
 		max-width: 593px;
 		align-items: center;
 		gap: 1.4em;
+
+		@include for-size(phone) {
+			flex-direction: column;
+		}
 	}
 
 	&-img {
 		@include flex;
 		justify-content: center;
 		width: 100%;
+
+		@include for-size(phone) {
+			padding-bottom: 1.6em;
+		}
 	}
 
 	&-wrap:first-child {
@@ -38,11 +131,19 @@
 		font-family: $primary-fonts;
 		font-weight: 400;
 
+		@include for-size(phone) {
+			padding-bottom: 2.5em;
+		}
+
 		&-title {
 			font-size: rem(16);
 			line-height: rem(21);
 			color: $subtitle-color;
 			margin-bottom: 1em;
+
+			@include for-size(phone) {
+				line-height: rem(16);
+			}
 		}
 
 		&-subtitle {
@@ -53,36 +154,38 @@
 	}
 }
 
-.whatYouGet__code {
-	@include flex;
-	flex-direction: column;
-	align-items: flex-start;
+.whatYouGet__title {
+	padding-top: 5.8em;
 
-	&-title {
-		font-family: $primary-fonts;
-		font-weight: 700;
-		font-size: rem(48);
-		line-height: rem(50);
-		color: $title-color-text;
-		margin-bottom: 1.1em;
+	@include for-size(phone) {
+		text-align: center;
+		padding-top: 0;
 	}
 
-	&-image img {
-		width: 100%;
+	&-info {
+		font-family: $primary-fonts;
+		font-weight: 700;
+		font-size: rem(47);
+		line-height: rem(50);
+		color: $title-color-text;
+
+		@media(min-width: 993px) and (max-width:1115px) {
+			padding-bottom: 1.1em;
+			font-size: rem(40);
+			line-height: rem(40)
+		}
+
+		@include for-size(phone) {
+			font-size: rem(32);
+			line-height: rem(38);
+		}
 	}
 }
 
-// @media((min-width: 320px) and (max-width:480px)){
+.whatYouGet__code {
+	img {
+		width: 100%;
+		min-height: 519px;
+	}
 
-
-// }
-
-// @media((min-width: 481px) and (max-width:992px)){
-
-
-// }
-
-// @media((min-width: 993px) and (max-width:1200px)){
-
-
-// }
+}
