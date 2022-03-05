@@ -10,7 +10,7 @@
 - **Виталий Чалбаш** - студента №2
 
 ### Link for GitHub page: 
-[https://jamzzee.github.io/forkio/]
+[https://jamzzee.github.io/Project_forkio/]
 
 ### Server, - hot reload at  http://localhost:3000/
 npm run dev
