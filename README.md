@@ -1,3 +1,6 @@
+<style>
+background: red
+</style>
 #Список использованных технологий:
 Node.js
 Git bash
